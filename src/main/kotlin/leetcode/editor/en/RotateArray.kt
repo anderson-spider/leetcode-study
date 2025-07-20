@@ -61,20 +61,22 @@ object RotateArray {
         val nums2 = intArrayOf(-1, -100, 3, 99)
         solution.rotate(nums2, 2)
         assertContentEquals(intArrayOf(3, 99, -1, -100), nums2)
+
+        // Test case 3
+        val nums3 = intArrayOf(1, 2, 3)
+        solution.rotate(nums3, 3)
+        assertContentEquals(intArrayOf(1, 2, 3), nums3)
     }
 
     //leetcode submit region begin(Prohibit modification and deletion)
     class Solution {
         fun rotate(nums: IntArray, k: Int): Unit {
-            val n = nums.size
-            val rotations = k % n
-
             // Reverse the entire array
-            reverse(nums = nums, start = 0, end = n - 1)
+            reverse(nums = nums, start = 0, end = nums.size - 1)
             // Reverse first k elements
-            reverse(nums = nums, start = 0, end = rotations - 1)
+            reverse(nums = nums, start = 0, end = k % nums.size - 1)
             // Reverse remaining elements
-            reverse(nums = nums, start = rotations, end = n - 1)
+            reverse(nums = nums, start = k % nums.size, end = nums.size - 1)
         }
 
         fun reverse(nums: IntArray, start: Int, end: Int) {
@@ -90,7 +92,7 @@ object RotateArray {
         }
 
     }
-//leetcode submit region end(Prohibit modification and deletion)
+    //leetcode submit region end(Prohibit modification and deletion)
 
 
 }
