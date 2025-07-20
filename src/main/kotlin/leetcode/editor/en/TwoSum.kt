@@ -52,7 +52,7 @@ import kotlin.test.assertEquals
 //
 // Related Topics Array Hash Table 👍 62813 👎 2272
 
-object TwoSumTest {
+object TwoSum {
 
     @JvmStatic
     fun main(args: Array<String>) {
