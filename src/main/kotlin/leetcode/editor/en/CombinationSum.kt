@@ -53,15 +53,47 @@ object CombinationSum {
     @JvmStatic
     fun main(args: Array<String>) {
         val solution = Solution()
-    }
-    
-    //leetcode submit region begin(Prohibit modification and deletion)
-class Solution {
-    fun combinationSum(candidates: IntArray, target: Int): List<List<Int>> {
-        
-    }
-}
-//leetcode submit region end(Prohibit modification and deletion)
+        assert(
+            solution.combinationSum(intArrayOf(2, 3, 6, 7), 7) == listOf(
+                listOf(2, 2, 3), listOf(7)
+            )
+        ) { "Test case 1 failed" }
+        assert(
+            solution.combinationSum(intArrayOf(2, 3, 5), 8) == listOf(
+                listOf(2, 2, 2, 2), listOf(2, 3, 3), listOf(3, 5)
+            )
+        ) { "Test case 2 failed" }
+        assert(solution.combinationSum(intArrayOf(2), 1) == listOf<List<Int>>()) { "Test case 3 failed" }
+        println("All test cases passed!")
 
-    
+    }
+
+    //leetcode submit region begin(Prohibit modification and deletion)
+    class Solution {
+        fun combinationSum(candidates: IntArray, target: Int): List<List<Int>> {
+            val result = mutableListOf<List<Int>>()
+
+            fun backtrack(index: Int, currentSum: Int, currentCombination: MutableList<Int>) {
+                for (i in index until candidates.size) {
+                    val candidate = candidates[i]
+                    val newSum = currentSum + candidate
+
+                    if (newSum <= target) {
+                        val newCombination = ArrayList(currentCombination)
+                        newCombination.add(candidate)
+
+                        if (newSum == target) {
+                            result.add(newCombination)
+                        } else {
+                            backtrack(i, newSum, newCombination)
+                        }
+                    }
+                }
+            }
+
+            backtrack(0, 0, mutableListOf())
+            return result
+        }
+    }
+    //leetcode submit region end(Prohibit modification and deletion)
 }

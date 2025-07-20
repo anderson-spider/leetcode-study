@@ -1,0 +1,29 @@
+class Solution {
+    fun combinationSum(candidates: IntArray, target: Int): List<List<Int>> {
+        val result = mutableListOf<List<Int>>()
+
+        fun backtrack(index: Int, currentSum: Int, currentCombination: MutableList<Int>) {
+            for (i in index until candidates.size) {
+                val candidate = candidates[i]
+                val newSum = currentSum + candidate
+
+                if (newSum <= target) {
+                    val newCombination = ArrayList(currentCombination)
+                    newCombination.add(candidate)
+
+                    if (newSum == target) {
+                        result.add(newCombination)
+                    } else {
+                        backtrack(i, newSum, newCombination)
+                    }
+                }
+            }
+        }
+
+        backtrack(0, 0, mutableListOf())
+        return result
+    }
+}
+
+//runtime:2 ms
+//memory:46.7 MB
