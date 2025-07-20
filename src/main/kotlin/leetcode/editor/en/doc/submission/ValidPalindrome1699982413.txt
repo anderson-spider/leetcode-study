@@ -1,0 +1,19 @@
+class Solution {
+    fun isPalindrome(s: String): Boolean {
+        val cleanStr = s.lowercase().filter { it.isLetterOrDigit() }
+        var left = 0
+        var right = cleanStr.length - 1
+
+        while (left < right) {
+            if (cleanStr[left] != cleanStr[right]) {
+                return false
+            }
+            left++
+            right--
+        }
+        return true
+    }
+}
+
+//runtime:7 ms
+//memory:45.3 MB

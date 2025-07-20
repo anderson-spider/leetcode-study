@@ -47,15 +47,45 @@ object ValidPalindrome {
     @JvmStatic
     fun main(args: Array<String>) {
         val solution = Solution()
-    }
-    
-    //leetcode submit region begin(Prohibit modification and deletion)
-class Solution {
-    fun isPalindrome(s: String): Boolean {
-        
-    }
-}
-//leetcode submit region end(Prohibit modification and deletion)
 
-    
+        // Test case 1: Valid palindrome with special characters
+        val test1 = "A man, a plan, a canal: Panama"
+        println("Test case 1: ${solution.isPalindrome(test1)} (Expected: true)")
+
+        // Test case 2: Invalid palindrome
+        val test2 = "race a car"
+        println("Test case 2: ${solution.isPalindrome(test2)} (Expected: false)")
+
+        // Test case 3: Empty string with spaces
+        val test3 = " "
+        println("Test case 3: ${solution.isPalindrome(test3)} (Expected: true)")
+
+        // Test case 4: Alphanumeric palindrome
+        val test4 = "A1b2c2b1a"
+        println("Test case 4: ${solution.isPalindrome(test4)} (Expected: true)")
+    }
+
+    //leetcode submit region begin(Prohibit modification and deletion)
+    class Solution {
+        fun isPalindrome(s: String): Boolean {
+            if (s.isEmpty()) return true
+
+            val filtered = s.lowercase().filter { it.isLetterOrDigit() }
+            var left = 0
+            var right = filtered.length - 1
+
+            while (left < right) {
+                if (filtered[left] != filtered[right]) {
+                    return false
+                }
+                left++
+                right--
+            }
+
+            return true
+        }
+    }
+    //leetcode submit region end(Prohibit modification and deletion)
+
+
 }
