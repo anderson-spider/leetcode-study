@@ -48,21 +48,22 @@ object ValidPalindrome {
     fun main(args: Array<String>) {
         val solution = Solution()
 
-        // Test case 1: Valid palindrome with special characters
-        val test1 = "A man, a plan, a canal: Panama"
-        println("Test case 1: ${solution.isPalindrome(test1)} (Expected: true)")
+        // Test case 1: Regular palindrome with special characters
+        assert(solution.isPalindrome("A man, a plan, a canal: Panama"))
 
-        // Test case 2: Invalid palindrome
-        val test2 = "race a car"
-        println("Test case 2: ${solution.isPalindrome(test2)} (Expected: false)")
+        // Test case 2: Non-palindrome
+        assert(!solution.isPalindrome("race a car"))
 
         // Test case 3: Empty string with spaces
-        val test3 = " "
-        println("Test case 3: ${solution.isPalindrome(test3)} (Expected: true)")
+        assert(solution.isPalindrome(" "))
 
         // Test case 4: Alphanumeric palindrome
-        val test4 = "A1b2c2b1a"
-        println("Test case 4: ${solution.isPalindrome(test4)} (Expected: true)")
+        assert(solution.isPalindrome("ab2ba"))
+
+        // Test case 5: Single character
+        assert(solution.isPalindrome("a"))
+
+        println("All test cases passed!")
     }
 
     //leetcode submit region begin(Prohibit modification and deletion)

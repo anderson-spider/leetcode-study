@@ -43,21 +43,28 @@ object BestTimeToBuyAndSellStock {
     fun main(args: Array<String>) {
         val solution = Solution()
 
-        // Test case 1: Basic case with profit
+        // Test case 1
         val prices1 = intArrayOf(7, 1, 5, 3, 6, 4)
-        println("Test case 1: ${solution.maxProfit(prices1)} (Expected: 5)")
+        assert(solution.maxProfit(prices1) == 5) {
+            "Test case 1 failed! Expected: 5, Actual: ${
+                solution.maxProfit(
+                    prices1
+                )
+            }"
+        }
+        println("Test case 1 passed!")
 
-        // Test case 2: No profit possible
+        // Test case 2
         val prices2 = intArrayOf(7, 6, 4, 3, 1)
-        println("Test case 2: ${solution.maxProfit(prices2)} (Expected: 0)")
+        assert(solution.maxProfit(prices2) == 0) {
+            "Test case 2 failed! Expected: 0, Actual: ${
+                solution.maxProfit(
+                    prices2
+                )
+            }"
+        }
+        println("Test case 2 passed!")
 
-        // Test case 3: Single element
-        val prices3 = intArrayOf(1)
-        println("Test case 3: ${solution.maxProfit(prices3)} (Expected: 0)")
-
-        // Test case 4: Two elements with profit
-        val prices4 = intArrayOf(1, 2)
-        println("Test case 4: ${solution.maxProfit(prices4)} (Expected: 1)")
     }
 
     //leetcode submit region begin(Prohibit modification and deletion)

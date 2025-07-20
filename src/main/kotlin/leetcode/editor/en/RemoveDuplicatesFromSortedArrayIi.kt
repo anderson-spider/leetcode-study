@@ -71,20 +71,21 @@ object RemoveDuplicatesFromSortedArrayIi {
     fun main(args: Array<String>) {
         val solution = Solution()
 
-        // Test case 1: Basic case with duplicates
+        // Test case 1: [1,1,1,2,2,3]
         val nums1 = intArrayOf(1, 1, 1, 2, 2, 3)
-        println("Test case 1: ${solution.removeDuplicates(nums1)} (Expected: 5)")
-        println("Modified array: ${nums1.take(5)} (Expected: [1, 1, 2, 2, 3])")
+        assert(solution.removeDuplicates(nums1) == 5)
+        assert(nums1.slice(0..4) == listOf(1, 1, 2, 2, 3))
 
-        // Test case 2: Case with more duplicates
+        // Test case 2: [0,0,1,1,1,1,2,3,3]
         val nums2 = intArrayOf(0, 0, 1, 1, 1, 1, 2, 3, 3)
-        println("Test case 2: ${solution.removeDuplicates(nums2)} (Expected: 7)")
-        println("Modified array: ${nums2.take(7)} (Expected: [0, 0, 1, 1, 2, 3, 3])")
+        assert(solution.removeDuplicates(nums2) == 7)
+        assert(nums2.slice(0..6) == listOf(0, 0, 1, 1, 2, 3, 3))
 
-        // Test case 3: Array with no duplicates
-        val nums3 = intArrayOf(1, 2, 3, 4)
-        println("Test case 3: ${solution.removeDuplicates(nums3)} (Expected: 4)")
-        println("Modified array: ${nums3.take(4)} (Expected: [1, 2, 3, 4])")
+        // Test case 3: Empty array
+        val nums3 = intArrayOf()
+        assert(solution.removeDuplicates(nums3) == 0)
+
+        println("All test cases passed!")
     }
 
     //leetcode submit region begin(Prohibit modification and deletion)

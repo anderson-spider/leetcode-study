@@ -33,10 +33,17 @@ object MajorityElement {
     @JvmStatic
     fun main(args: Array<String>) {
         val solution = Solution()
-        println("Test Case 1: ${solution.majorityElement(intArrayOf(3, 2, 3)) == 3}")
-        println("Test Case 2: ${solution.majorityElement(intArrayOf(2, 2, 1, 1, 1, 2, 2)) == 2}")
-        println("Test Case 3: ${solution.majorityElement(intArrayOf(1)) == 1}")
 
+        // Test case 1
+        assert(solution.majorityElement(intArrayOf(3, 2, 3)) == 3)
+
+        // Test case 2
+        assert(solution.majorityElement(intArrayOf(2, 2, 1, 1, 1, 2, 2)) == 2)
+
+        // Test case 3
+        assert(solution.majorityElement(intArrayOf(1)) == 1)
+
+        println("All test cases passed!")
     }
 
     //leetcode submit region begin(Prohibit modification and deletion)

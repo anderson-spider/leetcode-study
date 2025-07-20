@@ -58,13 +58,13 @@ object TwoSum {
     fun main(args: Array<String>) {
         val solution = Solution()
         val case1 = solution.twoSum(nums = intArrayOf(2, 7, 11, 15), target = 9)
-        assertContentEquals(intArrayOf(0,1), case1)
+        assertContentEquals(intArrayOf(0, 1), case1)
 
         val case2 = solution.twoSum(nums = intArrayOf(3, 2, 4), target = 6)
-        assertContentEquals(intArrayOf(1,2), case2)
+        assertContentEquals(intArrayOf(1, 2), case2)
 
         val case3 = solution.twoSum(nums = intArrayOf(3, 3), target = 6)
-        assertContentEquals(intArrayOf(0,1), case3)
+        assertContentEquals(intArrayOf(0, 1), case3)
     }
 
     //leetcode submit region begin(Prohibit modification and deletion)

@@ -68,9 +68,9 @@ object ValidParentheses {
         assertEquals(false, solution.isValid("]"))
         assertEquals(true, solution.isValid(""))
     }
-    
+
     //leetcode submit region begin(Prohibit modification and deletion)
-class Solution {
+    class Solution {
         fun isValid(s: String): Boolean {
             val stack = ArrayDeque<Char>()
 
@@ -85,8 +85,8 @@ class Solution {
 
             return stack.isEmpty()
         }
-}
+    }
 //leetcode submit region end(Prohibit modification and deletion)
 
-    
+
 }

@@ -82,23 +82,23 @@ object RemoveDuplicatesFromSortedArray {
         assertEquals(5, solution.removeDuplicates(nums2))
         assertContentEquals(intArrayOf(0, 1, 2, 3, 4, 2, 2, 3, 3, 4), nums2)
     }
-    
+
     //leetcode submit region begin(Prohibit modification and deletion)
-class Solution {
-    fun removeDuplicates(nums: IntArray): Int {
-        var point = 1
+    class Solution {
+        fun removeDuplicates(nums: IntArray): Int {
+            var point = 1
 
-        for (i in 1 until nums.size) {
-            if (nums[i] != nums[i-1]) {
-                nums[point] = nums[i]
-                point++
+            for (i in 1 until nums.size) {
+                if (nums[i] != nums[i - 1]) {
+                    nums[point] = nums[i]
+                    point++
+                }
             }
-        }
 
-        return point
+            return point
+        }
     }
-}
 //leetcode submit region end(Prohibit modification and deletion)
 
-    
+
 }

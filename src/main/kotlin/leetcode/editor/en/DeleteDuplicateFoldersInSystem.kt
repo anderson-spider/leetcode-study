@@ -98,48 +98,56 @@ object DeleteDuplicateFoldersInSystem {
     fun main(args: Array<String>) {
         val solution = Solution()
 
-        // Test case 1: Basic case with duplicate folders
-        println(
-            solution.deleteDuplicateFolder(
-                listOf(
-                    listOf("a"),
-                    listOf("c"),
-                    listOf("d"),
-                    listOf("a", "b"),
-                    listOf("c", "b"),
-                    listOf("d", "a")
-                )
-            )
+        // Test case 1
+        var paths = listOf(
+            listOf("a"),
+            listOf("c"),
+            listOf("d"),
+            listOf("a", "b"),
+            listOf("c", "b"),
+            listOf("d", "a")
         )
-
-        // Test case 2: Nested duplicate folders
-        println(
-            solution.deleteDuplicateFolder(
-                listOf(
-                    listOf("a"),
-                    listOf("c"),
-                    listOf("a", "b"),
-                    listOf("c", "b"),
-                    listOf("a", "b", "x"),
-                    listOf("a", "b", "x", "y"),
-                    listOf("w"),
-                    listOf("w", "y")
-                )
-            )
+        var expected = listOf(
+            listOf("d"),
+            listOf("d", "a")
         )
+        assert(solution.deleteDuplicateFolder(paths).toSet() == expected.toSet())
 
-        // Test case 3: No duplicate folders
-        println(
-            solution.deleteDuplicateFolder(
-                listOf(
-                    listOf("a", "b"),
-                    listOf("c", "d"),
-                    listOf("c"),
-                    listOf("a")
-                )
-            )
+        // Test case 2
+        paths = listOf(
+            listOf("a"),
+            listOf("c"),
+            listOf("a", "b"),
+            listOf("c", "b"),
+            listOf("a", "b", "x"),
+            listOf("a", "b", "x", "y"),
+            listOf("w"),
+            listOf("w", "y")
         )
+        expected = listOf(
+            listOf("c"),
+            listOf("c", "b"),
+            listOf("a"),
+            listOf("a", "b")
+        )
+        assert(solution.deleteDuplicateFolder(paths).toSet() == expected.toSet())
 
+        // Test case 3
+        paths = listOf(
+            listOf("a", "b"),
+            listOf("c", "d"),
+            listOf("c"),
+            listOf("a")
+        )
+        expected = listOf(
+            listOf("c"),
+            listOf("c", "d"),
+            listOf("a"),
+            listOf("a", "b")
+        )
+        assert(solution.deleteDuplicateFolder(paths).toSet() == expected.toSet())
+
+        println("All test cases passed!")
     }
 
     //leetcode submit region begin(Prohibit modification and deletion)

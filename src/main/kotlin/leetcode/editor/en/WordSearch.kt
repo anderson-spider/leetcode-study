@@ -54,23 +54,31 @@ object WordSearch {
     fun main(args: Array<String>) {
         val solution = Solution()
 
-        // Test case 1: Word exists in the grid
+        // Test case 1
         val board1 = arrayOf(
             charArrayOf('A', 'B', 'C', 'E'),
             charArrayOf('S', 'F', 'C', 'S'),
             charArrayOf('A', 'D', 'E', 'E')
         )
-        val word1 = "ABCCED"
-        println("Test case 1: ${solution.exist(board1, word1)} (Expected: true)")
+        assert(solution.exist(board1, "ABCCED")) { "Test case 1 failed" }
 
-        // Test case 2: Another word exists in the grid
-        val word2 = "SEE"
-        println("Test case 2: ${solution.exist(board1, word2)} (Expected: true)")
+        // Test case 2
+        val board2 = arrayOf(
+            charArrayOf('A', 'B', 'C', 'E'),
+            charArrayOf('S', 'F', 'C', 'S'),
+            charArrayOf('A', 'D', 'E', 'E')
+        )
+        assert(solution.exist(board2, "SEE")) { "Test case 2 failed" }
 
-        // Test case 3: Word does not exist in the grid
-        val word3 = "ABCB"
-        println("Test case 3: ${solution.exist(board1, word3)} (Expected: false)")
+        // Test case 3
+        val board3 = arrayOf(
+            charArrayOf('A', 'B', 'C', 'E'),
+            charArrayOf('S', 'F', 'C', 'S'),
+            charArrayOf('A', 'D', 'E', 'E')
+        )
+        assert(!solution.exist(board3, "ABCB")) { "Test case 3 failed" }
 
+        println("All test cases passed!")
     }
 
     //leetcode submit region begin(Prohibit modification and deletion)
