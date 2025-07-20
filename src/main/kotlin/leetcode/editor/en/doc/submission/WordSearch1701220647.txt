@@ -1,0 +1,44 @@
+import kotlin.CharArray
+
+class Solution {
+    fun exist(board: Array<CharArray>, word: String): Boolean {
+        for (row in board.indices) {
+            for (col in board[0].indices) {
+                if (backtrack(board, word, row, col, 0))
+                    return true
+            }
+        }
+
+        return false
+    }
+
+    fun backtrack(
+        board: Array<CharArray>,
+        word: String,
+        rowIdx: Int,
+        colIdx: Int,
+        wordIdx: Int
+    ): Boolean {
+        if (wordIdx == word.length)
+            return true
+
+        if (rowIdx !in board.indices || colIdx !in board[0].indices || board[rowIdx][colIdx] != word[wordIdx])
+            return false
+
+        val originalValue = board[rowIdx][colIdx]
+        board[rowIdx][colIdx] = '#'
+
+        val found = backtrack(board, word, rowIdx, colIdx - 1, wordIdx + 1) || //up
+                backtrack(board, word, rowIdx, colIdx + 1, wordIdx + 1) || // down
+                backtrack(board, word, rowIdx - 1, colIdx, wordIdx + 1) || // left
+                backtrack(board, word, rowIdx + 1, colIdx, wordIdx + 1) // right
+
+        board[rowIdx][colIdx] = originalValue
+
+        return found
+    }
+
+}
+
+//runtime:162 ms
+//memory:43.4 MB
