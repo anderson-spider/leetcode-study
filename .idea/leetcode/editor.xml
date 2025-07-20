@@ -3,6 +3,17 @@
   <component name="LeetcodeEditor">
     <option name="projectConfig">
       <map>
+        <entry key="$PROJECT_DIR$/src/main/kotlin/leetcode/editor/en/DeleteDuplicateFoldersInSystem.kt">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/main/kotlin/leetcode/editor/en/doc/content/DeleteDuplicateFoldersInSystem.md" />
+              <option name="frontendQuestionId" value="leetcode.com1948" />
+              <option name="host" value="leetcode.com" />
+              <option name="path" value="$PROJECT_DIR$/src/main/kotlin/leetcode/editor/en/DeleteDuplicateFoldersInSystem.kt" />
+              <option name="titleSlug" value="delete-duplicate-folders-in-system" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/main/kotlin/leetcode/editor/en/LongestCommonPrefix.kt">
           <value>
             <LeetcodeEditor>
