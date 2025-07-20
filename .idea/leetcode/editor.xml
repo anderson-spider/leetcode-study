@@ -3,6 +3,17 @@
   <component name="LeetcodeEditor">
     <option name="projectConfig">
       <map>
+        <entry key="$PROJECT_DIR$/src/main/kotlin/leetcode/editor/en/BestTimeToBuyAndSellStock.kt">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/main/kotlin/leetcode/editor/en/doc/content/BestTimeToBuyAndSellStock.md" />
+              <option name="frontendQuestionId" value="leetcode.com121" />
+              <option name="host" value="leetcode.com" />
+              <option name="path" value="$PROJECT_DIR$/src/main/kotlin/leetcode/editor/en/BestTimeToBuyAndSellStock.kt" />
+              <option name="titleSlug" value="best-time-to-buy-and-sell-stock" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/main/kotlin/leetcode/editor/en/CombinationSum.kt">
           <value>
             <LeetcodeEditor>
