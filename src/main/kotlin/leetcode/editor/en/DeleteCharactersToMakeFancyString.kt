@@ -62,9 +62,11 @@ object DeleteCharactersToMakeFancyString {
         fun makeFancyString(s: String): String {
             if (s.length <= 2) return s
 
-            val result = StringBuilder(s.length)
+            val result = CharArray(s.length)
+            var writeIndex = 0
             var count = 1
-            result.append(s[0])
+            result[writeIndex++] = s[0]
+
             for (i in 1 until s.length) {
                 if (s[i] == s[i - 1]) {
                     count++
@@ -72,10 +74,10 @@ object DeleteCharactersToMakeFancyString {
                     count = 1
                 }
                 if (count <= 2) {
-                    result.append(s[i])
+                    result[writeIndex++] = s[i]
                 }
             }
-            return result.toString()
+            return String(result, 0, writeIndex)
         }
     }
     // leetcode submit region end(Prohibit modification and deletion)
