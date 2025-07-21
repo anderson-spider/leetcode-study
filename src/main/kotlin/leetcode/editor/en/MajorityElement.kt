@@ -1,33 +1,33 @@
 package leetcode.editor.en
-//Given an array nums of size n, return the majority element. 
+// Given an array nums of size n, return the majority element.
 //
-// The majority element is the element that appears more than ⌊n / 2⌋ times. 
-//You may assume that the majority element always exists in the array. 
+// The majority element is the element that appears more than ⌊n / 2⌋ times.
+// You may assume that the majority element always exists in the array.
 //
-// 
-// Example 1: 
+//
+// Example 1:
 // Input: nums = [3,2,3]
-//Output: 3
-// 
-// Example 2: 
+// Output: 3
+//
+// Example 2:
 // Input: nums = [2,2,1,1,1,2,2]
-//Output: 2
-// 
-// 
-// Constraints: 
+// Output: 2
 //
-// 
-// n == nums.length 
-// 1 <= n <= 5 * 10⁴ 
-// -10⁹ <= nums[i] <= 10⁹ 
-// 
 //
-// 
-//Follow-up: Could you solve the problem in linear time and in 
-//O(1) space?
+// Constraints:
 //
-// Related Topics Array Hash Table Divide and Conquer Sorting Counting 👍 21273 
-//👎 744
+//
+// n == nums.length
+// 1 <= n <= 5 * 10⁴
+// -10⁹ <= nums[i] <= 10⁹
+//
+//
+//
+// Follow-up: Could you solve the problem in linear time and in
+// O(1) space?
+//
+// Related Topics Array Hash Table Divide and Conquer Sorting Counting 👍 21273
+// 👎 744
 
 object MajorityElement {
     @JvmStatic
@@ -35,18 +35,18 @@ object MajorityElement {
         val solution = Solution()
 
         // Test case 1
-        assert(solution.majorityElement(intArrayOf(3, 2, 3)) == 3)
+        check(solution.majorityElement(intArrayOf(3, 2, 3)) == 3)
 
         // Test case 2
-        assert(solution.majorityElement(intArrayOf(2, 2, 1, 1, 1, 2, 2)) == 2)
+        check(solution.majorityElement(intArrayOf(2, 2, 1, 1, 1, 2, 2)) == 2)
 
         // Test case 3
-        assert(solution.majorityElement(intArrayOf(1)) == 1)
+        check(solution.majorityElement(intArrayOf(1)) == 1)
 
         println("All test cases passed!")
     }
 
-    //leetcode submit region begin(Prohibit modification and deletion)
+    // leetcode submit region begin(Prohibit modification and deletion)
     class Solution {
         fun majorityElement(nums: IntArray): Int {
             var count = 0
@@ -60,7 +60,5 @@ object MajorityElement {
             return candidate
         }
     }
-    //leetcode submit region end(Prohibit modification and deletion)
-
-
+    // leetcode submit region end(Prohibit modification and deletion)
 }

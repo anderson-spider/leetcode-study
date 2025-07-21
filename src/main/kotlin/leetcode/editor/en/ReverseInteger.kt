@@ -1,63 +1,56 @@
 package leetcode.editor.en
 
 import kotlin.math.abs
-import kotlin.test.assertEquals
 
-//Given a signed 32-bit integer x, return x with its digits reversed. If 
-//reversing x causes the value to go outside the signed 32-bit integer range [-2³¹, 2³¹ -
-// 1], then return 0. 
+// Given a signed 32-bit integer x, return x with its digits reversed. If
+// reversing x causes the value to go outside the signed 32-bit integer range [-2³¹, 2³¹ -
+// 1], then return 0.
 //
-// Assume the environment does not allow you to store 64-bit integers (signed 
-//or unsigned). 
+// Assume the environment does not allow you to store 64-bit integers (signed
+// or unsigned).
 //
-// 
-// Example 1: 
 //
-// 
-//Input: x = 123
-//Output: 321
-// 
+// Example 1:
 //
-// Example 2: 
 //
-// 
-//Input: x = -123
-//Output: -321
-// 
+// Input: x = 123
+// Output: 321
 //
-// Example 3: 
 //
-// 
-//Input: x = 120
-//Output: 21
-// 
+// Example 2:
 //
-// 
-// Constraints: 
 //
-// 
-// -2³¹ <= x <= 2³¹ - 1 
-// 
+// Input: x = -123
+// Output: -321
+//
+//
+// Example 3:
+//
+//
+// Input: x = 120
+// Output: 21
+//
+//
+//
+// Constraints:
+//
+//
+// -2³¹ <= x <= 2³¹ - 1
+//
 //
 // Related Topics Math 👍 14345 👎 13806
 
-
 object ReverseInteger {
-
     @JvmStatic
     fun main(args: Array<String>) {
         val solution = Solution()
-        val case1 = solution.reverse(x = 123)
-        assertEquals(321, case1)
-
-        val case2 = solution.reverse(x = -123)
-        assertEquals(-321, case2)
-
-        val case3 = solution.reverse(x = 120)
-        assertEquals(21, case3)
+        check(solution.reverse(x = 123) == 321) { "Test case 1 failed" }
+        check(solution.reverse(x = -123) == -321) { "Test case 2 failed" }
+        check(solution.reverse(x = 120) == 21) { "Test case 3 failed" }
+        println("All test cases passed!")
     }
 
-    //leetcode submit region begin(Prohibit modification and deletion)
+    // leetcode submit region begin(Prohibit modification and deletion)
     class Solution {
         fun reverse(x: Int): Int {
             val negative = x < 0
@@ -78,10 +71,7 @@ object ReverseInteger {
             } else {
                 revNum.toInt()
             }
-
         }
     }
-    //leetcode submit region end(Prohibit modification and deletion)
-
-
+    // leetcode submit region end(Prohibit modification and deletion)
 }

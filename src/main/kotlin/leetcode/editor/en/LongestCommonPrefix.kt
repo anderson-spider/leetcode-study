@@ -1,36 +1,34 @@
 package leetcode.editor.en
 
-import kotlin.test.assertEquals
-
-//Write a function to find the longest common prefix string amongst an array of
-//strings. 
+// Write a function to find the longest common prefix string amongst an array of
+// strings.
 //
-// If there is no common prefix, return an empty string "". 
+// If there is no common prefix, return an empty string "".
 //
-// 
-// Example 1: 
 //
-// 
-//Input: strs = ["flower","flow","flight"]
-//Output: "fl"
-// 
+// Example 1:
 //
-// Example 2: 
 //
-// 
-//Input: strs = ["dog","racecar","car"]
-//Output: ""
-//Explanation: There is no common prefix among the input strings.
-// 
+// Input: strs = ["flower","flow","flight"]
+// Output: "fl"
 //
-// 
-// Constraints: 
 //
-// 
-// 1 <= strs.length <= 200 
-// 0 <= strs[i].length <= 200 
-// strs[i] consists of only lowercase English letters if it is non-empty. 
-// 
+// Example 2:
+//
+//
+// Input: strs = ["dog","racecar","car"]
+// Output: ""
+// Explanation: There is no common prefix among the input strings.
+//
+//
+//
+// Constraints:
+//
+//
+// 1 <= strs.length <= 200
+// 0 <= strs[i].length <= 200
+// strs[i] consists of only lowercase English letters if it is non-empty.
+//
 //
 // Related Topics Array String Trie 👍 19497 👎 4764
 
@@ -38,14 +36,15 @@ object LongestCommonPrefix {
     @JvmStatic
     fun main(args: Array<String>) {
         val solution = Solution()
-        assertEquals("fl", solution.longestCommonPrefix(arrayOf("flower", "flow", "flight")))
-        assertEquals("", solution.longestCommonPrefix(arrayOf("dog", "racecar", "car")))
-        assertEquals("", solution.longestCommonPrefix(arrayOf()))
-        assertEquals("a", solution.longestCommonPrefix(arrayOf("a")))
-        assertEquals("c", solution.longestCommonPrefix(arrayOf("c", "c")))
+        check("fl" == solution.longestCommonPrefix(arrayOf("flower", "flow", "flight")))
+        check("" == solution.longestCommonPrefix(arrayOf("dog", "racecar", "car")))
+        check("" == solution.longestCommonPrefix(arrayOf()))
+        check("a" == solution.longestCommonPrefix(arrayOf("a")))
+        check("c" == solution.longestCommonPrefix(arrayOf("c", "c")))
+        println("All test cases passed!")
     }
 
-    //leetcode submit region begin(Prohibit modification and deletion)
+    // leetcode submit region begin(Prohibit modification and deletion)
     class Solution {
         fun longestCommonPrefix(strs: Array<String>): String {
             if (strs.isEmpty()) return ""
@@ -62,7 +61,5 @@ object LongestCommonPrefix {
         }
     }
 
-//leetcode submit region end(Prohibit modification and deletion)
-
-
+// leetcode submit region end(Prohibit modification and deletion)
 }

@@ -2,7 +2,9 @@
 
 ## Overview
 
-This Kotlin code implements an efficient solution for the **Array Rotation** problem from LeetCode. The algorithm uses the **triple reversal technique** to rotate an array `k` positions to the right with O(n) time complexity and O(1) space complexity.
+This Kotlin code implements an efficient solution for the **Array Rotation** problem from LeetCode. The algorithm uses
+the **triple reversal technique** to rotate an array `k` positions to the right with O(n) time complexity and O(1) space
+complexity.
 
 ## Algorithm Breakdown
 
@@ -24,8 +26,8 @@ fun rotate(nums: IntArray, k: Int): Unit {
 }
 ```
 
-
-**Key optimization**: `k % n` ensures the algorithm works correctly even when `k` is greater than the array size (since rotating `n` positions returns to the original state).
+**Key optimization**: `k % n` ensures the algorithm works correctly even when `k` is greater than the array size (since
+rotating `n` positions returns to the original state).
 
 ### Helper Function `reverse`
 
@@ -42,7 +44,6 @@ fun reverse(nums: IntArray, start: Int, end: Int) {
     }
 }
 ```
-
 
 This function reverses the elements in the array between positions `start` and `end` (inclusive).
 
@@ -68,11 +69,13 @@ Let's rotate `[1,2,3,4,5,6,7]` by `k = 3` positions:
 ## How It Works
 
 The triple reversal technique works because:
+
 1. When you reverse the entire array, elements that should end up at the beginning are moved to the front
 2. The first reversal of `k` elements puts them in the correct order
 3. The second reversal of the remaining elements also puts them in the correct order
 
-This approach transforms the problem of rotation into three simple reversal operations, making it both efficient and easy to understand.
+This approach transforms the problem of rotation into three simple reversal operations, making it both efficient and
+easy to understand.
 
 ## Complexity Analysis
 

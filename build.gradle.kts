@@ -1,5 +1,6 @@
 plugins {
     kotlin("jvm") version "2.1.21"
+    id("org.jlleitschuh.gradle.ktlint") version "13.0.0"
 }
 
 group = "org.example"
@@ -9,14 +10,6 @@ repositories {
     mavenCentral()
 }
 
-dependencies {
-    implementation(kotlin("test"))
-    implementation(kotlin("test-junit5"))
-}
-
-tasks.test {
-    useJUnitPlatform()
-}
 kotlin {
     jvmToolchain(21)
 }
