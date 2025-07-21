@@ -62,19 +62,20 @@ object DeleteCharactersToMakeFancyString {
         fun makeFancyString(s: String): String {
             if (s.length <= 2) return s
 
-            return buildString(capacity = s.length) {
-                var count = 1
-                for (i in s.indices) {
-                    if (i > 0 && s[i] == s[i - 1]) {
-                        count++
-                    } else {
-                        count = 1
-                    }
-                    if (count <= 2) {
-                        append(s[i])
-                    }
+            val result = StringBuilder(s.length)
+            var count = 1
+            result.append(s[0])
+            for (i in 1 until s.length) {
+                if (s[i] == s[i - 1]) {
+                    count++
+                } else {
+                    count = 1
+                }
+                if (count <= 2) {
+                    result.append(s[i])
                 }
             }
+            return result.toString()
         }
     }
     // leetcode submit region end(Prohibit modification and deletion)
