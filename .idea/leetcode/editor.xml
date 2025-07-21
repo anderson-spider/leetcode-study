@@ -36,6 +36,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/main/kotlin/leetcode/editor/en/DeleteCharactersToMakeFancyString.kt">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/main/kotlin/leetcode/editor/en/doc/content/DeleteCharactersToMakeFancyString.md" />
+              <option name="frontendQuestionId" value="leetcode.com1957" />
+              <option name="host" value="leetcode.com" />
+              <option name="path" value="$PROJECT_DIR$/src/main/kotlin/leetcode/editor/en/DeleteCharactersToMakeFancyString.kt" />
+              <option name="titleSlug" value="delete-characters-to-make-fancy-string" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/main/kotlin/leetcode/editor/en/DeleteDuplicateFoldersInSystem.kt">
           <value>
             <LeetcodeEditor>
