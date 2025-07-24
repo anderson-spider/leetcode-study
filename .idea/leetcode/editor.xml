@@ -25,6 +25,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/main/kotlin/leetcode/editor/en/CheckDivisibilityByDigitSumAndProduct.kt">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/main/kotlin/leetcode/editor/en/doc/content/CheckDivisibilityByDigitSumAndProduct.md" />
+              <option name="frontendQuestionId" value="leetcode.com3622" />
+              <option name="host" value="leetcode.com" />
+              <option name="path" value="$PROJECT_DIR$/src/main/kotlin/leetcode/editor/en/CheckDivisibilityByDigitSumAndProduct.kt" />
+              <option name="titleSlug" value="check-divisibility-by-digit-sum-and-product" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/main/kotlin/leetcode/editor/en/CombinationSum.kt">
           <value>
             <LeetcodeEditor>
@@ -33,6 +44,17 @@
               <option name="host" value="leetcode.com" />
               <option name="path" value="$PROJECT_DIR$/src/main/kotlin/leetcode/editor/en/CombinationSum.kt" />
               <option name="titleSlug" value="combination-sum" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/kotlin/leetcode/editor/en/CountNumberOfTrapezoidsI.kt">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/main/kotlin/leetcode/editor/en/doc/content/CountNumberOfTrapezoidsI.md" />
+              <option name="frontendQuestionId" value="leetcode.com3623" />
+              <option name="host" value="leetcode.com" />
+              <option name="path" value="$PROJECT_DIR$/src/main/kotlin/leetcode/editor/en/CountNumberOfTrapezoidsI.kt" />
+              <option name="titleSlug" value="count-number-of-trapezoids-i" />
             </LeetcodeEditor>
           </value>
         </entry>
