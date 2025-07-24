@@ -223,6 +223,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/main/kotlin/leetcode/editor/en/ReverseWordsInAStringIii.kt">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/main/kotlin/leetcode/editor/en/doc/content/ReverseWordsInAStringIii.md" />
+              <option name="frontendQuestionId" value="leetcode.com557" />
+              <option name="host" value="leetcode.com" />
+              <option name="path" value="$PROJECT_DIR$/src/main/kotlin/leetcode/editor/en/ReverseWordsInAStringIii.kt" />
+              <option name="titleSlug" value="reverse-words-in-a-string-iii" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/main/kotlin/leetcode/editor/en/RomanToInteger.kt">
           <value>
             <LeetcodeEditor>
