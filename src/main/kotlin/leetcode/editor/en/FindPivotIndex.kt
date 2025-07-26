@@ -67,24 +67,29 @@ object FindPivotIndex {
     // leetcode submit region begin(Prohibit modification and deletion)
     class Solution {
         fun pivotIndex(nums: IntArray): Int {
-            // Calculate total sum of array
-            var total = 0
+            if (nums.size == 1) return 0
+
+            // Calculate initial sum of all elements (right sum)
+            var rSum = 0
+            for (num in nums) rSum += num
+
+            // Check if first element is pivot (left sum = 0, right sum = 0)
+            if (rSum - nums[0] == 0) return 0
+
+            // Iterate through array comparing left and right sums
             var lSum = 0
-
-            for (num in nums) total += num
-
             for (i in nums.indices) {
-                // Calculate right sum by subtracting left sum and current element from total
-                val rSum = total - nums[i] - lSum
-                // If left sum equals right sum, we found the pivot index
+                // Subtract current element from right sum before comparison
+                rSum -= nums[i]
+                // If sums are equal, we found pivot index
                 if (lSum == rSum) return i
-                // Add current element to left sum for next iteration
+                // Add current element to left sum after comparison
                 lSum += nums[i]
             }
 
-            // No pivot index found
+            // Return -1 if no pivot index exists
             return -1
         }
     }
-// leetcode submit region end(Prohibit modification and deletion)
+    // leetcode submit region end(Prohibit modification and deletion)
 }
