@@ -65,20 +65,25 @@ object MinimumSizeSubarraySum {
             target: Int,
             nums: IntArray,
         ): Int {
+            // Initialize variables for sliding window
             var l = 0
             var sum = 0
             var min = nums.size + 1
             for (r in nums.indices) {
+                // If we find a single number equal to target, return 1
                 if (nums[r] == target) {
                     min = 1
                     break
                 }
+                // Add current number to running sum
                 sum += nums[r]
+                // Shrink window from left while sum >= target
                 while (l < nums.size && sum >= target) {
                     min = minOf(min, r - l + 1)
                     sum -= nums[l++]
                 }
             }
+            // Return 0 if no subarray found, otherwise return min length
             return if (min > nums.size) 0 else min
         }
     }
