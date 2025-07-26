@@ -66,10 +66,9 @@ object MinimumSizeSubarraySum {
             nums: IntArray,
         ): Int {
             var l = 0
-            var r = 0
             var sum = 0
             var min = nums.size + 1
-            while (r < nums.size) {
+            for (r in nums.indices) {
                 if (nums[r] == target) {
                     min = 1
                     break
@@ -79,7 +78,6 @@ object MinimumSizeSubarraySum {
                     min = minOf(min, r - l + 1)
                     sum -= nums[l++]
                 }
-                r++
             }
             return if (min > nums.size) 0 else min
         }
