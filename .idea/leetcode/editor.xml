@@ -201,6 +201,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/main/kotlin/leetcode/editor/en/LongestPathWithDifferentAdjacentCharacters.kt">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/main/kotlin/leetcode/editor/en/doc/content/LongestPathWithDifferentAdjacentCharacters.md" />
+              <option name="frontendQuestionId" value="leetcode.com2246" />
+              <option name="host" value="leetcode.com" />
+              <option name="path" value="$PROJECT_DIR$/src/main/kotlin/leetcode/editor/en/LongestPathWithDifferentAdjacentCharacters.kt" />
+              <option name="titleSlug" value="longest-path-with-different-adjacent-characters" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/main/kotlin/leetcode/editor/en/MajorityElement.kt">
           <value>
             <LeetcodeEditor>
