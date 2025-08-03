@@ -57,15 +57,25 @@ object LongestPalindromicSubstring {
                 if (i < rightLimit) {
                     radiusArray[i] = (rightLimit - i).coerceAtMost(maximumValue = radiusArray[mirror])
                 }
-                while (word[i - 1 - radiusArray[i]] == word[i + 1 + radiusArray[i]]) {
-                    radiusArray[i]++
-                }
+
+                expandAroundCenter(word, i, radiusArray)
+
                 if (i + radiusArray[i] > rightLimit) {
                     center = i
                     rightLimit = i + radiusArray[i]
                 }
             }
             return radiusArray
+        }
+
+        private fun expandAroundCenter(
+            word: StringBuilder,
+            i: Int,
+            radiusArray: IntArray,
+        ) {
+            while (word[i - 1 - radiusArray[i]] == word[i + 1 + radiusArray[i]]) {
+                radiusArray[i]++
+            }
         }
 
         private fun createPalindromeStructure(word: String): StringBuilder =
@@ -80,12 +90,12 @@ object LongestPalindromicSubstring {
             lcp: IntArray,
             word: StringBuilder,
         ): String {
-            val maxIndex = getLongestIndex(lcp)
+            val maxIndex = findHighestValueIndex(lcp)
             val maxLen = lcp[maxIndex]
             return word.substring(maxIndex - maxLen, maxIndex + maxLen).replace("#", "")
         }
 
-        private fun getLongestIndex(array: IntArray): Int {
+        private fun findHighestValueIndex(array: IntArray): Int {
             var maxValue = 0
             var maxIndex = 0
             for (i in 1 until array.size) {
