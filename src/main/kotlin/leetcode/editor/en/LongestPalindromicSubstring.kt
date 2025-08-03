@@ -31,62 +31,71 @@ object LongestPalindromicSubstring {
     @JvmStatic
     fun main(args: Array<String>) {
         val solution = Solution()
-        assert(solution.longestPalindrome("cacac") == "cacac")
+        check(solution.longestPalindrome("babad") == "bab" || solution.longestPalindrome("babad") == "aba")
+        check(solution.longestPalindrome("cbbd") == "bb")
+        check(solution.longestPalindrome("a") == "a")
+        check(solution.longestPalindrome("ac") == "a")
+        check(solution.longestPalindrome("racecar") == "racecar")
     }
 
     // leetcode submit region begin(Prohibit modification and deletion)
     class Solution {
-        fun longestPalindrome(s: String): String {
-            if (s.length < 2) return s
-
-            val oddString =
-                buildString {
-                    append("#")
-                    s.forEach { append(it).append("#") }
-                }
-
-            val p = manacher(oddString)
-
-            var maxLen = 0
-            var c = 0
-            for (i in oddString.indices) {
-                val palindromeLength = p[i]
-                if (palindromeLength > maxLen) {
-                    maxLen = palindromeLength
-                    c = i
-                }
-            }
-
-            val start = (c - maxLen) / 2
-            return s.substring(start, start + maxLen)
+        fun longestPalindrome(source: String): String {
+            val word = createPalindromeStructure(source) // (#b#a#b#a#d#)
+            val radiusArray = computePalindromeRadius(word)
+            val longestString = extractLongestString(radiusArray, word)
+            return longestString
         }
 
-        private fun manacher(str: String): IntArray {
-            val lps = IntArray(str.length)
-            var l = 0
-            var r = 0
+        private fun computePalindromeRadius(word: StringBuilder): IntArray {
+            val radiusArray = IntArray(word.length)
+            var center = 0
+            var rightLimit = 0
 
-            for (i in str.indices) {
-                if (i < r) {
-                    val iMirror = 2 * l - i
-                    lps[i] = minOf(r - i, lps[iMirror])
+            for (i in 1 until word.length - 1) {
+                val mirror = center * 2 - i
+                if (i < rightLimit) {
+                    radiusArray[i] = (rightLimit - i).coerceAtMost(maximumValue = radiusArray[mirror])
                 }
-
-                var a = i + (lps[i] + 1)
-                var b = i - (lps[i] + 1)
-                while (a < str.length && b >= 0 && str[a] == str[b]) {
-                    lps[i]++
-                    a++
-                    b--
+                while (word[i - 1 - radiusArray[i]] == word[i + 1 + radiusArray[i]]) {
+                    radiusArray[i]++
                 }
-
-                if (i + lps[i] > r) {
-                    l = i
-                    r = i + lps[i]
+                if (i + radiusArray[i] > rightLimit) {
+                    center = i
+                    rightLimit = i + radiusArray[i]
                 }
             }
-            return lps
+            return radiusArray
+        }
+
+        private fun createPalindromeStructure(word: String): StringBuilder =
+            StringBuilder(word.length * 2 + 1).apply {
+                append("(")
+                append("#")
+                word.forEach { append(it).append("#") }
+                append(")")
+            }
+
+        private fun extractLongestString(
+            lcp: IntArray,
+            word: StringBuilder,
+        ): String {
+            val maxIndex = getLongestIndex(lcp)
+            val maxLen = lcp[maxIndex]
+            return word.substring(maxIndex - maxLen, maxIndex + maxLen).replace("#", "")
+        }
+
+        private fun getLongestIndex(array: IntArray): Int {
+            var maxValue = 0
+            var maxIndex = 0
+            for (i in 1 until array.size) {
+                if (array[i] > maxValue) {
+                    maxValue = array[i]
+                    maxIndex = i
+                }
+            }
+            return maxIndex
         }
     }
-// leetcode submit region end(Prohibit modification and deletion)
+    // leetcode submit region end(Prohibit modification and deletion)
 }
