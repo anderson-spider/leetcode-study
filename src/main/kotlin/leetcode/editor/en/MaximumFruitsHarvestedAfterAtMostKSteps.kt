@@ -123,74 +123,55 @@ object MaximumFruitsHarvestedAfterAtMostKSteps {
             startPos: Int,
             k: Int,
         ): Int {
-            val n = fruits.size
-            val sum = IntArray(n + 1)
-            val indices = IntArray(n)
-            sum[0] = 0
-            for (i in 0..<n) {
-                sum[i + 1] = sum[i] + fruits[i]!![1]
-                indices[i] = fruits[i]!![0]
-            }
-            var ans = 0
-            for (x in 0..k / 2) {
-                // move left x steps, then move right k - x steps.
-                var y = k - 2 * x
-                var left = startPos - x
-                var right = startPos + y
-                var start = lowerBound(indices, 0, n - 1, left)
-                var end = upperBound(indices, 0, n - 1, right)
-                ans = max(ans, sum[end] - sum[start])
-                // move right x steps, then move left k - x steps.
-                y = k - 2 * x
-                left = startPos - y
-                right = startPos + x
-                start = lowerBound(indices, 0, n - 1, left)
-                end = upperBound(indices, 0, n - 1, right)
-                ans = max(ans, sum[end] - sum[start])
-            }
-            return ans
-        }
-
-        fun lowerBound(
-            arr: IntArray,
-            left: Int,
-            right: Int,
-            `val`: Int,
-        ): Int {
-            var left = left
-            var right = right
-            var res = right + 1
-            while (left <= right) {
-                val mid = left + (right - left) / 2
-                if (arr[mid] >= `val`) {
-                    res = mid
-                    right = mid - 1
-                } else {
-                    left = mid + 1
+            if (fruits.isEmpty()) return 0
+            
+            val positions = ArrayList<Int>()
+            val amounts = ArrayList<Int>()
+            
+            for (fruit in fruits) {
+                if (fruit != null) {
+                    positions.add(fruit[0])
+                    amounts.add(fruit[1])
                 }
             }
-            return res
-        }
-
-        fun upperBound(
-            arr: IntArray,
-            left: Int,
-            right: Int,
-            value: Int,
-        ): Int {
-            var left = left
-            var right = right
-            var res = right + 1
-            while (left <= right) {
-                val mid = left + (right - left) / 2
-                if (arr[mid] > value) {
-                    res = mid
-                    right = mid - 1
-                } else {
-                    left = mid + 1
+            
+            val n = positions.size
+            if (n == 0) return 0
+            
+            var maxFruits = 0
+            var currentSum = 0
+            var left = 0
+            
+            for (right in 0 until n) {
+                currentSum += amounts[right]
+                
+                while (left <= right) {
+                    val leftPos = positions[left]
+                    val rightPos = positions[right]
+                    
+                    val minSteps = when {
+                        rightPos <= startPos -> startPos - leftPos // All fruits are to the right of startPos
+                        leftPos >= startPos -> rightPos - startPos
+                        else -> minOf(
+                            // Go left first to leftPos, then right to rightPos
+                            (startPos - leftPos) + (rightPos - leftPos),
+                            // Go right first to rightPos, then left to leftPos
+                            (rightPos - startPos) + (rightPos - leftPos)
+                        )
+                    }
+                    
+                    if (minSteps <= k) {
+                        break
+                    }
+                    
+                    currentSum -= amounts[left]
+                    left++
                 }
+                
+                maxFruits = maxOf(maxFruits, currentSum)
             }
-            return res
+            
+            return maxFruits
         }
     }
     // leetcode submit region end(Prohibit modification and deletion)
