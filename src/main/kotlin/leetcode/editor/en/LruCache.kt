@@ -77,6 +77,9 @@ object LruCache {
      */
     class LRUCache(
         private val capacity: Int,
+        private val head: Node = Node(0, 0),
+        private val tail: Node = Node(0, 0),
+        private val map: HashMap<Int, Node> = HashMap((capacity / 0.75f).toInt() + 1),
     ) {
         class Node(
             var key: Int,
@@ -85,40 +88,29 @@ object LruCache {
             var next: Node? = null,
         )
 
-        private var counter: Int = 0
-        private val head: Node = Node(0, 0)
-        private val tail: Node = Node(0, 0)
-        private val map: HashMap<Int, Node?> = HashMap(capacity)
-
         init {
-
             head.next = tail
             tail.prev = head
-
-            head.prev = null
-            tail.next = null
         }
 
-        private fun deleteNode(node: Node?) =
-            node?.let { node ->
-                node.prev?.next = node.next
-                node.next?.prev = node.prev
-            }
+        private fun deleteNode(node: Node) {
+            node.prev?.next = node.next
+            node.next?.prev = node.prev
+        }
 
-        private fun addToHead(node: Node?) =
-            node?.let { node ->
-                node.next = head.next
-                node.next?.prev = node
-                node.prev = head
-                head.next = node
-            }
+        private fun addToHead(node: Node) {
+            node.next = head.next
+            node.next?.prev = node
+            node.prev = head
+            head.next = node
+        }
 
-        fun get(key: Int): Int =
-            map[key]?.let { node ->
-                deleteNode(node)
-                addToHead(node)
-                node.value
-            } ?: -1
+        fun get(key: Int): Int {
+            val node = map[key] ?: return -1
+            deleteNode(node)
+            addToHead(node)
+            return node.value
+        }
 
         fun put(
             key: Int,
@@ -130,15 +122,13 @@ object LruCache {
                 deleteNode(node)
                 addToHead(node)
             } else {
-                val node = Node(key, value)
-                if (counter < capacity) {
-                    counter++
-                } else {
+                val newNode = Node(key, value)
+                if (map.size >= capacity) {
                     map.remove(tail.prev!!.key)
-                    deleteNode(tail.prev)
+                    deleteNode(tail.prev!!)
                 }
-                map[key] = node
-                addToHead(node)
+                map[key] = newNode
+                addToHead(newNode)
             }
         }
     }
