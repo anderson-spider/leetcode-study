@@ -68,10 +68,11 @@ object ContainsDuplicateIi {
             var i = 0
             while (i < nums.size) {
                 val j = map[nums[i]]
-                
-                if(j != null && i -j <= k) 
+
+                if (j != null && i - j <= k) {
                     return true
-                
+                }
+
                 map[nums[i]] = i
                 i++
             }

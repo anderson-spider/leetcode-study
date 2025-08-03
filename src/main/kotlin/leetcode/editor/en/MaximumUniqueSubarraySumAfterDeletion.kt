@@ -100,29 +100,29 @@ object MaximumUniqueSubarraySumAfterDeletion {
     class Solution {
         /**
          * Finds the maximum sum of a subarray with unique elements after performing deletions.
-         * 
+         *
          * Approach:
          * 1. We want to maximize the sum, so we should include only positive unique numbers
          * 2. If there are no positive numbers (or their sum is not positive), we return the maximum value
          *    in the array as the best possible result
-         * 
+         *
          * @param nums The input array of integers
          * @return The maximum possible sum of a subarray with unique elements
          */
         fun maxSum(nums: IntArray): Int {
             // Track which numbers we've already seen (constraint: -100 <= nums[i] <= 100)
             val exists = BooleanArray(101)
-            
+
             // Running sum of unique positive numbers
             var sum = 0
-            
+
             // Track the maximum value in the array (initialized to minimum possible value)
             var max = -100
 
             for (num in nums) {
                 // Update the maximum value seen so far
                 max = maxOf(max, num)
-                
+
                 // Only include positive numbers that haven't been seen before
                 // This ensures we maximize our sum with unique elements
                 if (num > 0 && !exists[num]) {

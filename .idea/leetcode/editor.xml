@@ -223,6 +223,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/main/kotlin/leetcode/editor/en/MaximumFruitsHarvestedAfterAtMostKSteps.kt">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/main/kotlin/leetcode/editor/en/doc/content/MaximumFruitsHarvestedAfterAtMostKSteps.md" />
+              <option name="frontendQuestionId" value="leetcode.com2106" />
+              <option name="host" value="leetcode.com" />
+              <option name="path" value="$PROJECT_DIR$/src/main/kotlin/leetcode/editor/en/MaximumFruitsHarvestedAfterAtMostKSteps.kt" />
+              <option name="titleSlug" value="maximum-fruits-harvested-after-at-most-k-steps" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/main/kotlin/leetcode/editor/en/MaximumLengthSubstringWithTwoOccurrences.kt">
           <value>
             <LeetcodeEditor>
