@@ -476,6 +476,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/main/kotlin/leetcode/editor/en/SerializeAndDeserializeBinaryTree.kt">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/main/kotlin/leetcode/editor/en/doc/content/SerializeAndDeserializeBinaryTree.md" />
+              <option name="frontendQuestionId" value="leetcode.com297" />
+              <option name="host" value="leetcode.com" />
+              <option name="path" value="$PROJECT_DIR$/src/main/kotlin/leetcode/editor/en/SerializeAndDeserializeBinaryTree.kt" />
+              <option name="titleSlug" value="serialize-and-deserialize-binary-tree" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/main/kotlin/leetcode/editor/en/TwoSum.kt">
           <value>
             <LeetcodeEditor>
