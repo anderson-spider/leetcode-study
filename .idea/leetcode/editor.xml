@@ -344,6 +344,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/main/kotlin/leetcode/editor/en/NumberOfProvinces.kt">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/main/kotlin/leetcode/editor/en/doc/content/NumberOfProvinces.md" />
+              <option name="frontendQuestionId" value="leetcode.com547" />
+              <option name="host" value="leetcode.com" />
+              <option name="path" value="$PROJECT_DIR$/src/main/kotlin/leetcode/editor/en/NumberOfProvinces.kt" />
+              <option name="titleSlug" value="number-of-provinces" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/main/kotlin/leetcode/editor/en/PalindromeLinkedList.kt">
           <value>
             <LeetcodeEditor>
