@@ -90,9 +90,24 @@ object WordSearch {
             board: Array<CharArray>,
             word: String,
         ): Boolean {
+            val charFreq = mutableMapOf<Char, Int>()
+            for (row in board) {
+                for (col in row) {
+                    charFreq[col] = charFreq.getOrDefault(col, 0) + 1
+                }
+            }
+
+            for (ch in word) {
+                if (word.count { it == ch } > charFreq.getOrDefault(ch, 0)) {
+                    return false
+                }
+            }
+
             for (row in board.indices) {
                 for (col in board[0].indices) {
-                    if (backtrack(board, word, row, col, 0)) return true
+                    if (backtrack(board, word, row, col, 0)) {
+                        return true
+                    }
                 }
             }
 

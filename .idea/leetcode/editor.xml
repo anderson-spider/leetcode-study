@@ -377,6 +377,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/main/kotlin/leetcode/editor/en/PathSum.kt">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/main/kotlin/leetcode/editor/en/doc/content/PathSum.md" />
+              <option name="frontendQuestionId" value="leetcode.com112" />
+              <option name="host" value="leetcode.com" />
+              <option name="path" value="$PROJECT_DIR$/src/main/kotlin/leetcode/editor/en/PathSum.kt" />
+              <option name="titleSlug" value="path-sum" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/main/kotlin/leetcode/editor/en/PlusOne.kt">
           <value>
             <LeetcodeEditor>

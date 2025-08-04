@@ -74,13 +74,6 @@ object SerializeAndDeserializeBinaryTree {
         println("All test cases passed!")
     }
 
-    class TreeNode(
-        var `val`: Int,
-    ) {
-        var left: TreeNode? = null
-        var right: TreeNode? = null
-    }
-
     // leetcode submit region begin(Prohibit modification and deletion)
 
     /**
