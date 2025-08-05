@@ -104,19 +104,12 @@ object PathSum {
         fun hasPathSum(
             root: TreeNode?,
             targetSum: Int,
-        ): Boolean = findPathWithSum(root = root, targetSum = targetSum, sum = 0)
-
-        fun findPathWithSum(
-            root: TreeNode?,
-            targetSum: Int,
-            sum: Int,
         ): Boolean {
             if (root == null) return false
+            if (root.left == null && root.right == null && targetSum == root.`val`) return true
 
-            if (root.left == null && root.right == null) return sum + root.`val` == targetSum
-
-            return findPathWithSum(root.left, targetSum, sum + root.`val`) ||
-                findPathWithSum(root.right, targetSum, sum + root.`val`)
+            return hasPathSum(root = root.left, targetSum = targetSum - root.`val`) ||
+                hasPathSum(root = root.right, targetSum = targetSum - root.`val`)
         }
     }
 // leetcode submit region end(Prohibit modification and deletion)

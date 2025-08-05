@@ -1,7 +1,5 @@
 package leetcode.editor.en
 
-import kotlin.math.max
-
 // Fruits are available at some positions on an infinite x-axis. You are given a
 // 2D integer array fruits where fruits[i] = [positioni, amounti] depicts amounti
 // fruits at the position positioni. fruits is already sorted by positioni in
@@ -124,53 +122,55 @@ object MaximumFruitsHarvestedAfterAtMostKSteps {
             k: Int,
         ): Int {
             if (fruits.isEmpty()) return 0
-            
+
             val positions = ArrayList<Int>()
             val amounts = ArrayList<Int>()
-            
+
             for (fruit in fruits) {
                 if (fruit != null) {
                     positions.add(fruit[0])
                     amounts.add(fruit[1])
                 }
             }
-            
+
             val n = positions.size
             if (n == 0) return 0
-            
+
             var maxFruits = 0
             var currentSum = 0
             var left = 0
-            
+
             for (right in 0 until n) {
                 currentSum += amounts[right]
-                
+
                 while (left <= right) {
                     val leftPos = positions[left]
                     val rightPos = positions[right]
-                    
-                    val minSteps = when {
-                        rightPos <= startPos -> startPos - leftPos // All fruits are to the right of startPos
-                        leftPos >= startPos -> rightPos - startPos
-                        else -> minOf(
-                            // Go left first to leftPos, then right to rightPos
-                            (startPos - leftPos) + (rightPos - leftPos),
-                            // Go right first to rightPos, then left to leftPos
-                            (rightPos - startPos) + (rightPos - leftPos)
-                        )
-                    }
-                    
+
+                    val minSteps =
+                        when {
+                            rightPos <= startPos -> startPos - leftPos // All fruits are to the right of startPos
+                            leftPos >= startPos -> rightPos - startPos
+                            else ->
+                                minOf(
+                                    // Go left first to leftPos, then right to rightPos
+                                    (startPos - leftPos) + (rightPos - leftPos),
+                                    // Go right first to rightPos, then left to leftPos
+                                    (rightPos - startPos) + (rightPos - leftPos),
+                                )
+                        }
+
                     if (minSteps <= k) {
                         break
                     }
-                    
+
                     currentSum -= amounts[left]
                     left++
                 }
-                
+
                 maxFruits = maxOf(maxFruits, currentSum)
             }
-            
+
             return maxFruits
         }
     }

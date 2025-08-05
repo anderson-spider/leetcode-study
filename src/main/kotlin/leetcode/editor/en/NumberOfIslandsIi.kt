@@ -60,19 +60,20 @@ object NumberOfIslandsIi {
     @JvmStatic
     fun main(args: Array<String>) {
         val solution = Solution()
-        
+
         // Test Example 1
         val m1 = 3
         val n1 = 3
-        val positions1 = arrayOf(
-            intArrayOf(0, 0),
-            intArrayOf(0, 1),
-            intArrayOf(1, 2),
-            intArrayOf(2, 1)
-        )
+        val positions1 =
+            arrayOf(
+                intArrayOf(0, 0),
+                intArrayOf(0, 1),
+                intArrayOf(1, 2),
+                intArrayOf(2, 1),
+            )
         val result1 = solution.numIslands2(m1, n1, positions1)
         println("Example 1 Result: $result1") // Expected: [1, 1, 2, 3]
-        
+
         // Test Example 2
         val m2 = 1
         val n2 = 1
@@ -93,56 +94,58 @@ object NumberOfIslandsIi {
             val grid = Array(m) { BooleanArray(n) { false } } // false = water, true = land
             val result = mutableListOf<Int>()
             var count = 0 // Number of islands
-            
+
             // Directions for adjacent cells: up, right, down, left
             val directions = arrayOf(intArrayOf(-1, 0), intArrayOf(0, 1), intArrayOf(1, 0), intArrayOf(0, -1))
-            
+
             for (position in positions) {
                 val row = position[0]
                 val col = position[1]
-                
+
                 // Skip if this cell is already land
                 if (grid[row][col]) {
                     result.add(count)
                     continue
                 }
-                
+
                 // Convert to land
                 grid[row][col] = true
                 count++
-                
+
                 // Check all 4 adjacent cells
                 for (dir in directions) {
                     val newRow = row + dir[0]
                     val newCol = col + dir[1]
-                    
+
                     // Skip if out of bounds or if it's water
                     if (newRow < 0 || newRow >= m || newCol < 0 || newCol >= n || !grid[newRow][newCol]) {
                         continue
                     }
-                    
+
                     // Get the indices in the 1D array
                     val currentIndex = row * n + col
                     val neighborIndex = newRow * n + newCol
-                    
+
                     // If they are not already connected, connect them and reduce island count
                     if (uf.find(currentIndex) != uf.find(neighborIndex)) {
                         uf.union(currentIndex, neighborIndex)
                         count--
                     }
                 }
-                
+
                 result.add(count)
             }
-            
+
             return result
         }
-        
+
         // Union-Find data structure
-        private class UnionFind(size: Int) {
+        private class UnionFind(
+            size: Int,
+        ) {
             private val parent = IntArray(size) { it } // Each element is its own parent initially
             private val rank = IntArray(size) { 1 } // Rank (or size) of each set
-            
+
             // Find the root of the set that element belongs to
             fun find(x: Int): Int {
                 if (parent[x] != x) {
@@ -150,12 +153,15 @@ object NumberOfIslandsIi {
                 }
                 return parent[x]
             }
-            
+
             // Union two sets
-            fun union(x: Int, y: Int) {
+            fun union(
+                x: Int,
+                y: Int,
+            ) {
                 val rootX = find(x)
                 val rootY = find(y)
-                
+
                 if (rootX != rootY) {
                     // Union by rank: attach smaller tree under root of larger tree
                     if (rank[rootX] > rank[rootY]) {

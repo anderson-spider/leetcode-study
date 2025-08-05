@@ -51,3 +51,4 @@ bin/
 /.idea/vcs.xml
 /.idea/workspace.xml
 /.idea/ktlint-plugin.xml
+/.junie/guidelines.md

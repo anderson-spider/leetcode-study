@@ -51,13 +51,13 @@ object LongestPathWithDifferentAdjacentCharacters {
     @JvmStatic
     fun main(args: Array<String>) {
         val solution = Solution()
-        
+
         // Test Example 1
         val parent1 = intArrayOf(-1, 0, 0, 1, 1, 2)
         val s1 = "abacbe"
         val result1 = solution.longestPath(parent1, s1)
         println("Example 1 Result: $result1, Expected: 3")
-        
+
         // Test Example 2
         val parent2 = intArrayOf(-1, 0, 0, 0)
         val s2 = "aabc"
@@ -74,28 +74,28 @@ object LongestPathWithDifferentAdjacentCharacters {
             val n = parent.size
             // Build adjacency list
             val children = Array(n) { mutableListOf<Int>() }
-            
+
             // Skip index 0 as it's the root with parent -1
             for (i in 1 until n) {
                 children[parent[i]].add(i)
             }
-            
+
             // Global variable to track maximum path length
             var maxPath = 1
-            
+
             // DFS function to find longest path
             fun dfs(node: Int): Int {
                 // If no children, path length is 1 (just the node itself)
                 if (children[node].isEmpty()) return 1
-                
+
                 // Find the two longest paths from children
                 var longest = 0
                 var secondLongest = 0
-                
+
                 for (child in children[node]) {
                     // Get longest path starting from this child
                     val childPath = dfs(child)
-                    
+
                     // Only consider paths where child has different character than current node
                     if (s[child] != s[node]) {
                         when {
@@ -109,18 +109,18 @@ object LongestPathWithDifferentAdjacentCharacters {
                         }
                     }
                 }
-                
+
                 // Update global maximum path
                 // The path can go through the current node connecting the two longest child paths
                 maxPath = maxOf(maxPath, longest + secondLongest + 1)
-                
+
                 // Return the longest path starting from this node
                 return longest + 1
             }
-            
+
             // Start DFS from the root (node 0)
             dfs(0)
-            
+
             return maxPath
         }
     }

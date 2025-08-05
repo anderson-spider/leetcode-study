@@ -36,6 +36,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/main/kotlin/leetcode/editor/en/BinaryTreeLevelOrderTraversal.kt">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/main/kotlin/leetcode/editor/en/doc/content/BinaryTreeLevelOrderTraversal.md" />
+              <option name="frontendQuestionId" value="leetcode.com102" />
+              <option name="host" value="leetcode.com" />
+              <option name="path" value="$PROJECT_DIR$/src/main/kotlin/leetcode/editor/en/BinaryTreeLevelOrderTraversal.kt" />
+              <option name="titleSlug" value="binary-tree-level-order-traversal" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/main/kotlin/leetcode/editor/en/CheckDivisibilityByDigitSumAndProduct.kt">
           <value>
             <LeetcodeEditor>
@@ -135,6 +146,28 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/main/kotlin/leetcode/editor/en/FloodFill.kt">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/main/kotlin/leetcode/editor/en/doc/content/FloodFill.md" />
+              <option name="frontendQuestionId" value="leetcode.com733" />
+              <option name="host" value="leetcode.com" />
+              <option name="path" value="$PROJECT_DIR$/src/main/kotlin/leetcode/editor/en/FloodFill.kt" />
+              <option name="titleSlug" value="flood-fill" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/kotlin/leetcode/editor/en/FruitsIntoBasketsIi.kt">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/main/kotlin/leetcode/editor/en/doc/content/FruitsIntoBasketsIi.md" />
+              <option name="frontendQuestionId" value="leetcode.com3477" />
+              <option name="host" value="leetcode.com" />
+              <option name="path" value="$PROJECT_DIR$/src/main/kotlin/leetcode/editor/en/FruitsIntoBasketsIi.kt" />
+              <option name="titleSlug" value="fruits-into-baskets-ii" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/main/kotlin/leetcode/editor/en/HouseRobberIii.kt">
           <value>
             <LeetcodeEditor>
@@ -209,6 +242,17 @@
               <option name="host" value="leetcode.com" />
               <option name="path" value="$PROJECT_DIR$/src/main/kotlin/leetcode/editor/en/LongestCommonPrefix.kt" />
               <option name="titleSlug" value="longest-common-prefix" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/kotlin/leetcode/editor/en/LongestConsecutiveSequence.kt">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/main/kotlin/leetcode/editor/en/doc/content/LongestConsecutiveSequence.md" />
+              <option name="frontendQuestionId" value="leetcode.com128" />
+              <option name="host" value="leetcode.com" />
+              <option name="path" value="$PROJECT_DIR$/src/main/kotlin/leetcode/editor/en/LongestConsecutiveSequence.kt" />
+              <option name="titleSlug" value="longest-consecutive-sequence" />
             </LeetcodeEditor>
           </value>
         </entry>
@@ -341,6 +385,17 @@
               <option name="host" value="leetcode.com" />
               <option name="path" value="$PROJECT_DIR$/src/main/kotlin/leetcode/editor/en/NumberOf1Bits.kt" />
               <option name="titleSlug" value="number-of-1-bits" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/kotlin/leetcode/editor/en/NumberOfEnclaves.kt">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/main/kotlin/leetcode/editor/en/doc/content/NumberOfEnclaves.md" />
+              <option name="frontendQuestionId" value="leetcode.com1020" />
+              <option name="host" value="leetcode.com" />
+              <option name="path" value="$PROJECT_DIR$/src/main/kotlin/leetcode/editor/en/NumberOfEnclaves.kt" />
+              <option name="titleSlug" value="number-of-enclaves" />
             </LeetcodeEditor>
           </value>
         </entry>
@@ -517,6 +572,17 @@
               <option name="host" value="leetcode.com" />
               <option name="path" value="$PROJECT_DIR$/src/main/kotlin/leetcode/editor/en/RotateArray.kt" />
               <option name="titleSlug" value="rotate-array" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/kotlin/leetcode/editor/en/SameTree.kt">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/main/kotlin/leetcode/editor/en/doc/content/SameTree.md" />
+              <option name="frontendQuestionId" value="leetcode.com100" />
+              <option name="host" value="leetcode.com" />
+              <option name="path" value="$PROJECT_DIR$/src/main/kotlin/leetcode/editor/en/SameTree.kt" />
+              <option name="titleSlug" value="same-tree" />
             </LeetcodeEditor>
           </value>
         </entry>

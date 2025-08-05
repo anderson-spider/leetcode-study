@@ -36,38 +36,37 @@ object PalindromeLinkedList {
     @JvmStatic
     fun main(args: Array<String>) {
         val solution = Solution()
-        
+
         // Test case 1: [1,2,2,1] - should return true
         val test1 = createLinkedList(listOf(1, 2, 2, 1))
         println("Test case 1: [1,2,2,1] - Result: ${solution.isPalindrome(test1)}")
-        
+
         // Test case 2: [1,2] - should return false
         val test2 = createLinkedList(listOf(1, 2))
         println("Test case 2: [1,2] - Result: ${solution.isPalindrome(test2)}")
-        
+
         // Edge case 1: Single node [5] - should return true
         val test3 = createLinkedList(listOf(5))
         println("Edge case 1: [5] - Result: ${solution.isPalindrome(test3)}")
-        
+
         // Edge case 2: Empty list - should return true
         println("Edge case 2: [] - Result: ${solution.isPalindrome(null)}")
     }
-    
+
     // Helper function to create a linked list from a list of integers
     private fun createLinkedList(values: List<Int>): ListNode? {
         if (values.isEmpty()) return null
-        
+
         val head = ListNode(values[0])
         var current = head
-        
+
         for (i in 1 until values.size) {
             current.next = ListNode(values[i])
             current = current.next!!
         }
-        
+
         return head
     }
-
 
     class ListNode(
         var `val`: Int,
@@ -83,16 +82,15 @@ object PalindromeLinkedList {
      * var v = li.`val`
      * Definition for singly-linked list.
      *
-        class ListNode(var `val`: Int) {
-            var next: ListNode? = null
-        }
+     class ListNode(var `val`: Int) {
+     var next: ListNode? = null
+     }
      */
-
 
     class Solution {
         fun isPalindrome(head: ListNode?): Boolean {
             if (head?.next == null) return true // Single node or empty list is a palindrome
-            
+
             // Find the middle of the linked list using slow and fast pointers
             var slow = head
             var fast = head
@@ -100,16 +98,16 @@ object PalindromeLinkedList {
                 slow = slow?.next
                 fast = fast.next?.next
             }
-            
+
             // If the list has odd number of nodes, move slow one step forward
             if (fast != null) {
                 slow = slow?.next
             }
-            
+
             // Reverse the second half of the linked list
             var reversedSecondHalf = reverseList(slow)
             var firstHalf = head
-            
+
             // Compare the first half with the reversed second half
             while (reversedSecondHalf != null) {
                 if (firstHalf?.`val` != reversedSecondHalf.`val`) {
@@ -118,22 +116,22 @@ object PalindromeLinkedList {
                 firstHalf = firstHalf.next
                 reversedSecondHalf = reversedSecondHalf.next
             }
-            
+
             return true
         }
-        
+
         // Helper function to reverse a linked list
         private fun reverseList(head: ListNode?): ListNode? {
             var prev: ListNode? = null
             var current = head
-            
+
             while (current != null) {
                 val next = current.next
                 current.next = prev
                 prev = current
                 current = next
             }
-            
+
             return prev
         }
     }
