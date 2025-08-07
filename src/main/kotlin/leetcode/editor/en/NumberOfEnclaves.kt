@@ -40,41 +40,6 @@ package leetcode.editor.en
 // Matrix 👍 4410 👎 86
 
 object NumberOfEnclaves {
-    @JvmStatic
-    fun main(args: Array<String>) {
-        val solution = Solution()
-        val result =
-            solution.numEnclaves(
-                arrayOf(
-                    intArrayOf(0, 0, 0, 0),
-                    intArrayOf(1, 0, 1, 0),
-                    intArrayOf(0, 1, 1, 0),
-                    intArrayOf(0, 0, 0, 0),
-                ),
-            )
-        check(result == 3) { "result:$result but expected:3" }
-        val result2 =
-            solution.numEnclaves(
-                arrayOf(
-                    intArrayOf(0, 1, 1, 0),
-                    intArrayOf(0, 0, 1, 0),
-                    intArrayOf(0, 0, 1, 0),
-                    intArrayOf(0, 0, 0, 0),
-                ),
-            )
-        check(result2 == 0) { "result:$result2 but expected:0" }
-        val result3 =
-            solution.numEnclaves(
-                arrayOf(
-                    intArrayOf(0, 0, 0, 0),
-                    intArrayOf(0, 1, 1, 0),
-                    intArrayOf(0, 0, 1, 0),
-                    intArrayOf(0, 0, 0, 0),
-                ),
-            )
-        check(result3 == 3) { "result:$result3 but expected:3" }
-    }
-
     // leetcode submit region begin(Prohibit modification and deletion)
     class Solution {
         fun numEnclaves(grid: Array<IntArray>): Int {

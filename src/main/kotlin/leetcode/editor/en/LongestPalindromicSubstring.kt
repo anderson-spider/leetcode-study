@@ -28,16 +28,6 @@ package leetcode.editor.en
 // Related Topics Two Pointers String Dynamic Programming 👍 31162 👎 1919
 
 object LongestPalindromicSubstring {
-    @JvmStatic
-    fun main(args: Array<String>) {
-        val solution = Solution()
-        check(solution.longestPalindrome("babad") == "bab" || solution.longestPalindrome("babad") == "aba")
-        check(solution.longestPalindrome("cbbd") == "bb")
-        check(solution.longestPalindrome("a") == "a")
-        check(solution.longestPalindrome("ac") == "a")
-        check(solution.longestPalindrome("racecar") == "racecar")
-    }
-
     // leetcode submit region begin(Prohibit modification and deletion)
     class Solution {
         fun longestPalindrome(source: String): String {

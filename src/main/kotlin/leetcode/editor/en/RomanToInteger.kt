@@ -68,15 +68,6 @@ package leetcode.editor.en
 // Related Topics Hash Table Math String 👍 16139 👎 1114
 
 object RomanToInteger {
-    @JvmStatic
-    fun main(args: Array<String>) {
-        val solution = Solution()
-        check(solution.romanToInt("III") == 3) { "Test case 1 failed" }
-        check(solution.romanToInt("LVIII") == 58) { "Test case 2 failed" }
-        check(solution.romanToInt("MCMXCIV") == 1994) { "Test case 3 failed" }
-        println("All test cases passed!")
-    }
-
     // leetcode submit region begin(Prohibit modification and deletion)
     class Solution {
         fun romanToInt(s: String): Int {

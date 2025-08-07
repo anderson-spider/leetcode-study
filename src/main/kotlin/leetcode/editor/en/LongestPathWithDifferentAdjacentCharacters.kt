@@ -48,23 +48,6 @@ package leetcode.editor.en
 // 2481 👎 61
 
 object LongestPathWithDifferentAdjacentCharacters {
-    @JvmStatic
-    fun main(args: Array<String>) {
-        val solution = Solution()
-
-        // Test Example 1
-        val parent1 = intArrayOf(-1, 0, 0, 1, 1, 2)
-        val s1 = "abacbe"
-        val result1 = solution.longestPath(parent1, s1)
-        println("Example 1 Result: $result1, Expected: 3")
-
-        // Test Example 2
-        val parent2 = intArrayOf(-1, 0, 0, 0)
-        val s2 = "aabc"
-        val result2 = solution.longestPath(parent2, s2)
-        println("Example 2 Result: $result2, Expected: 3")
-    }
-
     // leetcode submit region begin(Prohibit modification and deletion)
     class Solution {
         fun longestPath(

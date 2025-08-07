@@ -40,15 +40,6 @@ package leetcode.editor.en
 // Related Topics Array Binary Search 👍 17649 👎 837
 
 object SearchInsertPosition {
-    @JvmStatic
-    fun main(args: Array<String>) {
-        val solution = Solution()
-        check(solution.searchInsert(intArrayOf(1, 3, 5, 6), 5) == 2) { "Test case 1 failed" }
-        check(solution.searchInsert(intArrayOf(1, 3, 5, 6), 2) == 1) { "Test case 2 failed" }
-        check(solution.searchInsert(intArrayOf(1, 3, 5, 6), 7) == 4) { "Test case 3 failed" }
-        println("All test cases passed!")
-    }
-
     // leetcode submit region begin(Prohibit modification and deletion)
     class Solution {
         fun searchInsert(

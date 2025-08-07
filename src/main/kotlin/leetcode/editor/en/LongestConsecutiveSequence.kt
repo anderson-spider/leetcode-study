@@ -40,13 +40,6 @@ package leetcode.editor.en
 // Related Topics Array Hash Table Union Find 👍 21771 👎 1179
 
 object LongestConsecutiveSequence {
-    @JvmStatic
-    fun main(args: Array<String>) {
-        val solution = Solution()
-        println(solution.longestConsecutive(intArrayOf(100, 4, 200, 1, 3, 2)))
-        println(solution.longestConsecutive(intArrayOf(0, 3, 7, 2, 5, 8, 4, 6, 0, 1)))
-    }
-
     // leetcode submit region begin(Prohibit modification and deletion)
     class Solution {
         fun longestConsecutive(nums: IntArray): Int {

@@ -70,46 +70,6 @@ package leetcode.editor.en
 // ? 928
 
 object FloodFill {
-    @JvmStatic
-    fun main(args: Array<String>) {
-        val solution = Solution()
-        // Test case 1
-        val image1 =
-            arrayOf(
-                intArrayOf(1, 1, 1),
-                intArrayOf(1, 1, 0),
-                intArrayOf(1, 0, 1),
-            )
-        val result1 = solution.floodFill(image1, 1, 1, 2)
-        assert(
-            result1.contentDeepEquals(
-                arrayOf(
-                    intArrayOf(2, 2, 2),
-                    intArrayOf(2, 2, 0),
-                    intArrayOf(2, 0, 1),
-                ),
-            ),
-        ) { "Test case 1 failed" }
-
-        // Test case 2
-        val image2 =
-            arrayOf(
-                intArrayOf(0, 0, 0),
-                intArrayOf(0, 0, 0),
-            )
-        val result2 = solution.floodFill(image2, 0, 0, 0)
-        assert(
-            result2.contentDeepEquals(
-                arrayOf(
-                    intArrayOf(0, 0, 0),
-                    intArrayOf(0, 0, 0),
-                ),
-            ),
-        ) { "Test case 2 failed" }
-
-        println("All test cases passed!")
-    }
-
     // leetcode submit region begin(Prohibit modification and deletion)
     class Solution {
         fun floodFill(

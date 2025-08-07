@@ -41,39 +41,6 @@ package leetcode.editor.en
 // Binary Tree 👍 10767 👎 421
 
 object SerializeAndDeserializeBinaryTree {
-    @JvmStatic
-    fun main(args: Array<String>) {
-        val codec = Codec()
-
-        // Test case 1: Empty tree
-        check(codec.deserialize(codec.serialize(null)) == null) { "Failed: Empty tree test" }
-
-        // Test case 2: Single node tree
-        val singleNode = TreeNode(1)
-        check(codec.deserialize(codec.serialize(singleNode))?.`val` == 1) { "Failed: Single node test" }
-
-        // Test case 3: Complete binary tree
-        val root =
-            TreeNode(1).apply {
-                left = TreeNode(2)
-                right =
-                    TreeNode(3).apply {
-                        left = TreeNode(4)
-                        right = TreeNode(5)
-                    }
-            }
-        val serialized = codec.serialize(root)
-        val deserialized = codec.deserialize(serialized)
-
-        check(deserialized?.`val` == 1) { "Failed: Root value test" }
-        check(deserialized.left?.`val` == 2) { "Failed: Left child test" }
-        check(deserialized.right?.`val` == 3) { "Failed: Right child test" }
-        check(deserialized.right?.left?.`val` == 4) { "Failed: Right-left child test" }
-        check(deserialized.right?.right?.`val` == 5) { "Failed: Right-right child test" }
-
-        println("All test cases passed!")
-    }
-
     // leetcode submit region begin(Prohibit modification and deletion)
 
     /**

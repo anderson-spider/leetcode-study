@@ -78,76 +78,8 @@ package leetcode.editor.en
 // Related Topics Array Bit Manipulation Tree Depth-First Search 👍 756 👎 42
 
 object MinimumScoreAfterRemovalsOnATree {
-    @JvmStatic
-    fun main(args: Array<String>) {
-        val solution = Solution()
-
-        // Test Example 1
-        println("Testing Example 1:")
-        val nums1 = intArrayOf(1, 5, 5, 4, 11)
-        val edges1 =
-            arrayOf(
-                intArrayOf(0, 1),
-                intArrayOf(1, 2),
-                intArrayOf(1, 3),
-                intArrayOf(3, 4),
-            )
-        val result1 = solution.minimumScore(nums1, edges1)
-        println("Input: nums = [1,5,5,4,11], edges = [[0,1],[1,2],[1,3],[3,4]]")
-        println("Expected: 9")
-        println("Actual: $result1")
-        println("Test 1 ${if (result1 == 9) "PASSED" else "FAILED"}")
-        println()
-
-        // Test Example 2
-        println("Testing Example 2:")
-        val nums2 = intArrayOf(5, 5, 2, 4, 4, 2)
-        val edges2 =
-            arrayOf(
-                intArrayOf(0, 1),
-                intArrayOf(1, 2),
-                intArrayOf(5, 2),
-                intArrayOf(4, 3),
-                intArrayOf(1, 3),
-            )
-        val result2 = solution.minimumScore(nums2, edges2)
-        println("Input: nums = [5,5,2,4,4,2], edges = [[0,1],[1,2],[5,2],[4,3],[1,3]]")
-        println("Expected: 0")
-        println("Actual: $result2")
-        println("Test 2 ${if (result2 == 0) "PASSED" else "FAILED"}")
-        println()
-
-        // Test a simple case
-        println("Testing Simple Case:")
-        val nums3 = intArrayOf(1, 2, 3)
-        val edges3 =
-            arrayOf(
-                intArrayOf(0, 1),
-                intArrayOf(1, 2),
-            )
-        val result3 = solution.minimumScore(nums3, edges3)
-        println("Input: nums = [1,2,3], edges = [[0,1],[1,2]]")
-        println("Expected: 2 (components: [1], [2], [3] -> XORs: 1, 2, 3 -> score: 3-1=2)")
-        println("Actual: $result3")
-        println("Test 3 ${if (result3 == 2) "PASSED" else "FAILED"}")
-
-        println("\nAll tests completed!")
-    }
-
     // leetcode submit region begin(Prohibit modification and deletion)
     class Solution {
-        /**
-         * Finds the minimum score after removing two edges from a tree.
-         *
-         * Algorithm Overview:
-         * 1. Build adjacency list representation of the tree
-         * 2. Use DFS to compute subtree XOR sums and establish parent-child relationships
-         * 3. For each pair of edges, determine the three resulting components
-         * 4. Calculate XOR values for each component and find the minimum score
-         *
-         * Time Complexity: O(n²) where n is the number of nodes
-         * Space Complexity: O(n) for adjacency list and auxiliary arrays
-         */
         fun minimumScore(
             nums: IntArray,
             edges: Array<IntArray>,

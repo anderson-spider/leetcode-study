@@ -43,17 +43,6 @@ package leetcode.editor.en
 // Related Topics Hash Table String Queue Counting 👍 9372 👎 314
 
 object FirstUniqueCharacterInAString {
-    @JvmStatic
-    fun main(args: Array<String>) {
-        val solution = Solution()
-        check(solution.firstUniqChar("leetcode") == 0) { "Test case 1 failed" }
-        check(solution.firstUniqChar("loveleetcode") == 2) { "Test case 2 failed" }
-        check(solution.firstUniqChar("aabb") == -1) { "Test case 3 failed" }
-        check(solution.firstUniqChar("aa") == -1) { "Test case 4 failed" }
-        check(solution.firstUniqChar("ccaccc") == -1) { "Test case 5 failed" }
-        println("All test cases passed!")
-    }
-
     // leetcode submit region begin(Prohibit modification and deletion)
     const val NUM_CHARS = 26
 

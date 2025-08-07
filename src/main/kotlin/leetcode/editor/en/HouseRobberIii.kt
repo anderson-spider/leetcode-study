@@ -39,24 +39,6 @@ package leetcode.editor.en
 // 3 👎 153
 
 object HouseRobberIii {
-    @JvmStatic
-    fun main(args: Array<String>) {
-        val solution = Solution()
-
-        // Casos de teste organizados
-        val testCases =
-            listOf(
-                createComplexTree(),
-                createSimpleTree(rootVal = 2, leftVal = 3, rightVal = 3),
-                createSimpleTree(rootVal = 1, leftVal = 2, rightVal = 3),
-                createSingleChildTree(rootVal = 1, childVal = 3),
-            )
-
-        testCases.forEach { tree ->
-            println(solution.rob(tree))
-        }
-    }
-
     private fun createComplexTree(): TreeNode =
         TreeNode(3).apply {
             left =

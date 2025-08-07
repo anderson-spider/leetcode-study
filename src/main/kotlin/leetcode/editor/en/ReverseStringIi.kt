@@ -27,40 +27,6 @@ package leetcode.editor.en
 // Related Topics Two Pointers String 👍 2179 👎 4187
 
 object ReverseStringIi {
-    @JvmStatic
-    fun main(args: Array<String>) {
-        val solution = Solution()
-        // Test case 1: Basic reversal
-        val case1 = solution.reverseStr("abcdefg", 2)
-        val case1Expected = "bacdfeg"
-        check(case1 == case1Expected) {
-            "Test case 1 failed: Expected: \"$case1Expected\" but got: \"$case1\""
-        }
-
-        // Test case 2: String length equal to k
-        val case2 = solution.reverseStr("abcd", 2)
-        val case2Expected = "bacd"
-        check(case2 == case2Expected) {
-            "Test case 2 failed: Expected: \"$case2Expected\" but got: \"$case2\""
-        }
-
-        // Test case 3: String length less than k
-        val case3 = solution.reverseStr("abc", 4)
-        val case3Expected = "cba"
-        check(case3 == case3Expected) {
-            "Test case 3 failed: Expected: \"$case3Expected\" but got: \"$case3\""
-        }
-
-        // Test case 4: String length less than k
-        val case4 = solution.reverseStr("ba", 1)
-        val case4Expected = "ba"
-        check(case4 == case4Expected) {
-            "Test case 4 failed: Expected: \"$case4Expected\" but got: \"$case4\""
-        }
-
-        println("All test cases passed!")
-    }
-
     // leetcode submit region begin(Prohibit modification and deletion)
     class Solution {
         fun reverseStr(

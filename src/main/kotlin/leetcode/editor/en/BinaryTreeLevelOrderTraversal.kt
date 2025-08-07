@@ -35,26 +35,6 @@ package leetcode.editor.en
 // Related Topics Tree Breadth-First Search Binary Tree 👍 16386 👎 353
 
 object BinaryTreeLevelOrderTraversal {
-    @JvmStatic
-    fun main(args: Array<String>) {
-        val solution = Solution()
-
-        check(
-            solution.levelOrder(buildTree(arrayOf(3, 9, 20, null, null, 15, 7))) ==
-                listOf(listOf(3), listOf(9, 20), listOf(15, 7)),
-        ) { "Test case 1 failed" }
-
-        check(
-            solution.levelOrder(buildTree(arrayOf(1))) ==
-                listOf(listOf(1)),
-        ) { "Test case 2 failed" }
-
-        check(
-            solution.levelOrder(buildTree(arrayOf())) ==
-                emptyList<List<Int>>(),
-        ) { "Test case 3 failed" }
-    }
-
     // leetcode submit region begin(Prohibit modification and deletion)
     class TreeNode(
         var `val`: Int,

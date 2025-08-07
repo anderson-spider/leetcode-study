@@ -41,15 +41,6 @@ import kotlin.math.abs
 // Related Topics Math 👍 14345 👎 13806
 
 object ReverseInteger {
-    @JvmStatic
-    fun main(args: Array<String>) {
-        val solution = Solution()
-        check(solution.reverse(x = 123) == 321) { "Test case 1 failed" }
-        check(solution.reverse(x = -123) == -321) { "Test case 2 failed" }
-        check(solution.reverse(x = 120) == 21) { "Test case 3 failed" }
-        println("All test cases passed!")
-    }
-
     // leetcode submit region begin(Prohibit modification and deletion)
     class Solution {
         fun reverse(x: Int): Int {

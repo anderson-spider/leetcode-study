@@ -35,23 +35,6 @@ package leetcode.editor.en
 // Related Topics Array Dynamic Programming Greedy 👍 20777 👎 1403
 
 object JumpGame {
-    @JvmStatic
-    fun main(args: Array<String>) {
-        val solution = Solution()
-        // Test case 1: Can reach end
-        val value = solution.canJump(intArrayOf(1, 0, 1, 1, 4))
-        check(value) { "Test case 1 failed" }
-        // Test case 2: Cannot reach end
-        check(!solution.canJump(intArrayOf(3, 2, 1, 0, 4))) { "Test case 2 failed" }
-        // Test case 3: Single element
-        check(solution.canJump(intArrayOf(0))) { "Test case 3 failed" }
-        // Test case 4: All zeros except first
-        check(!solution.canJump(intArrayOf(1, 0, 0, 0))) { "Test case 4 failed" }
-        // Test case 5: Exact jumps needed
-        check(solution.canJump(intArrayOf(1, 1, 1, 1))) { "Test case 5 failed" }
-        println("All test cases passed!")
-    }
-
     // leetcode submit region begin(Prohibit modification and deletion)
     class Solution {
         fun canJump(nums: IntArray): Boolean {

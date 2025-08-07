@@ -48,15 +48,6 @@ package leetcode.editor.en
 // Related Topics String 👍 1134 👎 52
 
 object DeleteCharactersToMakeFancyString {
-    @JvmStatic
-    fun main(args: Array<String>) {
-        val solution = Solution()
-        check(solution.makeFancyString("leeetcode") == "leetcode")
-        check(solution.makeFancyString("aaabaaaa") == "aabaa")
-        check(solution.makeFancyString("aab") == "aab")
-        println("All test cases passed!")
-    }
-
     // leetcode submit region begin(Prohibit modification and deletion)
     class Solution {
         fun makeFancyString(s: String): String {

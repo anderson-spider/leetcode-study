@@ -49,21 +49,6 @@ package leetcode.editor.en
 // Related Topics Array Hash Table 👍 62813 👎 2272
 
 object TwoSum {
-    @JvmStatic
-    fun main(args: Array<String>) {
-        val solution = Solution()
-        val case1 = solution.twoSum(nums = intArrayOf(2, 7, 11, 15), target = 9)
-        check(case1.contentEquals(intArrayOf(0, 1))) { "Test case 1 failed" }
-
-        val case2 = solution.twoSum(nums = intArrayOf(3, 2, 4), target = 6)
-        check(case2.contentEquals(intArrayOf(1, 2))) { "Test case 2 failed" }
-
-        val case3 = solution.twoSum(nums = intArrayOf(3, 3), target = 6)
-        check(case3.contentEquals(intArrayOf(0, 1))) { "Test case 3 failed" }
-
-        println("All test cases passed!")
-    }
-
     // leetcode submit region begin(Prohibit modification and deletion)
     class Solution {
         fun twoSum(

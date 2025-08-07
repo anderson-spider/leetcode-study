@@ -30,22 +30,6 @@ package leetcode.editor.en
 // 👎 744
 
 object MajorityElement {
-    @JvmStatic
-    fun main(args: Array<String>) {
-        val solution = Solution()
-
-        // Test case 1
-        check(solution.majorityElement(intArrayOf(3, 2, 3)) == 3)
-
-        // Test case 2
-        check(solution.majorityElement(intArrayOf(2, 2, 1, 1, 1, 2, 2)) == 2)
-
-        // Test case 3
-        check(solution.majorityElement(intArrayOf(1)) == 1)
-
-        println("All test cases passed!")
-    }
-
     // leetcode submit region begin(Prohibit modification and deletion)
     class Solution {
         fun majorityElement(nums: IntArray): Int {

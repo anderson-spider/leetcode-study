@@ -65,55 +65,6 @@ package leetcode.editor.en
 // Related Topics Array Binary Search Sliding Window Prefix Sum 👍 584 👎 21
 
 object MaximumFruitsHarvestedAfterAtMostKSteps {
-    @JvmStatic
-    fun main(args: Array<String>) {
-        val solution = Solution()
-
-        // Test case 1
-        check(
-            solution.maxTotalFruits(
-                arrayOf(
-                    intArrayOf(2, 8),
-                    intArrayOf(6, 3),
-                    intArrayOf(8, 6),
-                ),
-                5,
-                4,
-            ) == 9,
-        )
-
-        // Test case 2
-        check(
-            solution.maxTotalFruits(
-                arrayOf(
-                    intArrayOf(0, 9),
-                    intArrayOf(4, 1),
-                    intArrayOf(5, 7),
-                    intArrayOf(6, 2),
-                    intArrayOf(7, 4),
-                    intArrayOf(10, 9),
-                ),
-                5,
-                4,
-            ) == 14,
-        )
-
-        // Test case 3
-        check(
-            solution.maxTotalFruits(
-                arrayOf(
-                    intArrayOf(0, 3),
-                    intArrayOf(6, 4),
-                    intArrayOf(8, 5),
-                ),
-                3,
-                2,
-            ) == 0,
-        )
-
-        println("All test cases passed!")
-    }
-
     // leetcode submit region begin(Prohibit modification and deletion)
     class Solution {
         fun maxTotalFruits(

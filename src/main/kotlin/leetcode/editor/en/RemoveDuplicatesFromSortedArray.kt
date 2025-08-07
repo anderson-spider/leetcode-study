@@ -68,19 +68,6 @@ package leetcode.editor.en
 // Related Topics Array Two Pointers 👍 17102 👎 19928
 
 object RemoveDuplicatesFromSortedArray {
-    @JvmStatic
-    fun main(args: Array<String>) {
-        val solution = Solution()
-        val nums1 = intArrayOf(1, 1, 2)
-        check(solution.removeDuplicates(nums1) == 2) { "Test case 1 failed" }
-        check(nums1.contentEquals(intArrayOf(1, 2, 2))) { "Test case 1 array verification failed" }
-
-        val nums2 = intArrayOf(0, 0, 1, 1, 1, 2, 2, 3, 3, 4)
-        check(solution.removeDuplicates(nums2) == 5) { "Test case 2 failed" }
-        check(nums2.contentEquals(intArrayOf(0, 1, 2, 3, 4, 2, 2, 3, 3, 4))) { "Test case 2 array verification failed" }
-        println("All test cases passed!")
-    }
-
     // leetcode submit region begin(Prohibit modification and deletion)
     class Solution {
         fun removeDuplicates(nums: IntArray): Int {

@@ -55,28 +55,6 @@ package leetcode.editor.en
 // Related Topics Two Pointers String 👍 9634 👎 5403
 
 object ReverseWordsInAString {
-    @JvmStatic
-    fun main(args: Array<String>) {
-        val solution = Solution()
-//        // Test case 1: Basic string reversal
-//        val case1 = solution.reverseWords("the sky is blue")
-//        check(case1 == "blue is sky the") { "Test case 1 failed: Expected 'blue is sky the' but got '$case1'" }
-
-        // Test case 2: Leading/trailing spaces
-        val case2 = solution.reverseWords("  hello world  ")
-        check(case2 == "world hello") { "Test case 2 failed: Expected 'world hello' but got '$case2'" }
-
-//        // Test case 3: Multiple spaces between words
-//        val case3 = solution.reverseWords("a good   example")
-//        check(case3 == "example good a") { "Test case 3 failed: Expected 'example good a' but got '$case3'" }
-//
-//        // Test case 4: Single word
-//        val case4 = solution.reverseWords("hello")
-//        check(case4 == "hello") { "Test case 4 failed: Expected 'hello' but got '$case4'" }
-//
-//        println("All test cases passed!")
-    }
-
     // leetcode submit region begin(Prohibit modification and deletion)
     class Solution {
         fun reverseWords(s: String): String {

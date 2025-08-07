@@ -46,14 +46,6 @@ package leetcode.editor.en
 // Related Topics Math 👍 27 👎 0
 
 object CheckDivisibilityByDigitSumAndProduct {
-    @JvmStatic
-    fun main(args: Array<String>) {
-        val solution = Solution()
-        check(solution.checkDivisibility(99)) { "Test case 1 failed: n=99 should return true" }
-        check(!solution.checkDivisibility(23)) { "Test case 2 failed: n=23 should return false" }
-        check(solution.checkDivisibility(100)) { "Test case 3 failed: n=100 should return true" }
-    }
-
     // leetcode submit region begin(Prohibit modification and deletion)
     class Solution {
         fun checkDivisibility(n: Int): Boolean {

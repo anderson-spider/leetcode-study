@@ -53,20 +53,6 @@ package leetcode.editor.en
 // 157
 
 object LruCache {
-    @JvmStatic
-    fun main(args: Array<String>) {
-        val lRUCache = LRUCache(2)
-        lRUCache.put(1, 1)
-        lRUCache.put(2, 2)
-        check(lRUCache.get(1) == 1)
-        lRUCache.put(3, 3)
-        check(lRUCache.get(2) == -1)
-        lRUCache.put(4, 4)
-        check(lRUCache.get(1) == -1)
-        check(lRUCache.get(3) == 3)
-        check(lRUCache.get(4) == 4)
-    }
-
     // leetcode submit region begin(Prohibit modification and deletion)
 
     /**

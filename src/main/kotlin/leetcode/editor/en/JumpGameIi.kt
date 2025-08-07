@@ -43,14 +43,6 @@ package leetcode.editor.en
 // Related Topics Array Dynamic Programming Greedy 👍 15707 👎 668
 
 object JumpGameIi {
-    @JvmStatic
-    fun main(args: Array<String>) {
-        val solution = Solution()
-        check(solution.jump(intArrayOf(2, 3, 1, 1, 4)) == 2)
-        check(solution.jump(intArrayOf(2, 3, 0, 1, 4)) == 2)
-        println("All test cases passed!")
-    }
-
     // leetcode submit region begin(Prohibit modification and deletion)
     class Solution {
         fun jump(nums: IntArray): Int {

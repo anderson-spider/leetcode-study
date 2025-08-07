@@ -41,13 +41,6 @@ package leetcode.editor.en
 // Related Topics String 👍 5861 👎 331
 
 object LengthOfLastWord {
-    @JvmStatic
-    fun main(args: Array<String>) {
-        val solution = Solution()
-        println(solution.lengthOfLastWord("Hello World"))
-        println(solution.lengthOfLastWord("   fly me   to   the moon  "))
-    }
-
     // leetcode submit region begin(Prohibit modification and deletion)
     class Solution {
         fun lengthOfLastWord(s: String): Int {

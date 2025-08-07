@@ -53,17 +53,6 @@ package leetcode.editor.en
 // Related Topics Divide and Conquer Bit Manipulation 👍 6898 👎 1354
 
 object NumberOf1Bits {
-    @JvmStatic
-    fun main(args: Array<String>) {
-        val solution = Solution()
-
-        check(solution.hammingWeight(11) == 3) { "Failed test case 1: Input 11 should have 3 set bits" }
-        check(solution.hammingWeight(128) == 1) { "Failed test case 2: Input 128 should have 1 set bit" }
-        check(solution.hammingWeight(2147483645) == 30) { "Failed test case 3: Input 2147483645 should have 30 set bits" }
-
-        println("All test cases passed!")
-    }
-
     // leetcode submit region begin(Prohibit modification and deletion)
     class Solution {
         fun hammingWeight(n: Int): Int {

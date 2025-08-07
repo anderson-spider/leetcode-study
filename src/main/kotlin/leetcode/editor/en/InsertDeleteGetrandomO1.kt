@@ -58,20 +58,6 @@ import kotlin.math.pow
 // Related Topics Array Hash Table Math Design Randomized 👍 9683 👎 677
 
 object InsertDeleteGetrandomO1 {
-    @JvmStatic
-    fun main(args: Array<String>) {
-        val randomizedSet = RandomizedSet()
-        check(randomizedSet.insert(1)) { "Insert 1 should return true" }
-        check(!randomizedSet.remove(2)) { "Remove 2 should return false" }
-        check(randomizedSet.insert(2)) { "Insert 2 should return true" }
-        val random1 = randomizedSet.getRandom()
-        check(random1 == 1 || random1 == 2) { "getRandom should return 1 or 2" }
-        check(randomizedSet.remove(1)) { "Remove 1 should return true" }
-        check(!randomizedSet.insert(2)) { "Insert 2 should return false" }
-        check(randomizedSet.getRandom() == 2) { "getRandom should return 2" }
-        println("All test cases passed!")
-    }
-
     // leetcode submit region begin(Prohibit modification and deletion)
     class RandomizedSet {
         val random = java.util.Random()

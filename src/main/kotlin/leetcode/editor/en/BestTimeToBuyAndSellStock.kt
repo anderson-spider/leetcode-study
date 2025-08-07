@@ -39,33 +39,6 @@ package leetcode.editor.en
 // Related Topics Array Dynamic Programming 👍 33636 👎 1304
 
 object BestTimeToBuyAndSellStock {
-    @JvmStatic
-    fun main(args: Array<String>) {
-        val solution = Solution()
-
-        // Test case 1
-        val prices1 = intArrayOf(7, 1, 5, 3, 6, 4)
-        check(solution.maxProfit(prices1) == 5) {
-            "Test case 1 failed! Expected: 5, Actual: ${
-                solution.maxProfit(
-                    prices1,
-                )
-            }"
-        }
-        println("Test case 1 passed!")
-
-        // Test case 2
-        val prices2 = intArrayOf(7, 6, 4, 3, 1)
-        check(solution.maxProfit(prices2) == 0) {
-            "Test case 2 failed! Expected: 0, Actual: ${
-                solution.maxProfit(
-                    prices2,
-                )
-            }"
-        }
-        println("Test case 2 passed!")
-    }
-
     // leetcode submit region begin(Prohibit modification and deletion)
     class Solution {
         fun maxProfit(prices: IntArray): Int {

@@ -43,29 +43,6 @@ package leetcode.editor.en
 // 634 👎 399
 
 object NumberOfProvinces {
-    @JvmStatic
-    fun main(args: Array<String>) {
-        val solution = Solution()
-        println(
-            solution.findCircleNum(
-                arrayOf(
-                    intArrayOf(1, 1, 0),
-                    intArrayOf(1, 1, 0),
-                    intArrayOf(0, 0, 1),
-                ),
-            ),
-        )
-        println(
-            solution.findCircleNum(
-                arrayOf(
-                    intArrayOf(1, 0, 0),
-                    intArrayOf(0, 1, 0),
-                    intArrayOf(0, 0, 1),
-                ),
-            ),
-        )
-    }
-
     // leetcode submit region begin(Prohibit modification and deletion)
     class Solution {
         fun findCircleNum(isConnected: Array<IntArray>): Int {

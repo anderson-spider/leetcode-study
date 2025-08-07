@@ -58,28 +58,6 @@ package leetcode.editor.en
 // Related Topics Array Two Pointers Sorting 👍 17320 👎 2413
 
 object MergeSortedArray {
-    @JvmStatic
-    fun main(args: Array<String>) {
-        val solution = Solution()
-
-        // Test case 1: Basic merge
-        val nums1 = intArrayOf(1, 2, 3, 0, 0, 0)
-        solution.merge(nums1, 3, intArrayOf(2, 5, 6), 3)
-        check(nums1.contentEquals(intArrayOf(1, 2, 2, 3, 5, 6))) { "Test case 1 failed" }
-
-        // Test case 2: Single element array
-        val nums2 = intArrayOf(1)
-        solution.merge(nums2, 1, intArrayOf(), 0)
-        check(nums2.contentEquals(intArrayOf(1))) { "Test case 2 failed" }
-
-        // Test case 3: Empty first array
-        val nums3 = intArrayOf(0)
-        solution.merge(nums3, 0, intArrayOf(1), 1)
-        check(nums3.contentEquals(intArrayOf(1))) { "Test case 3 failed" }
-
-        println("All test cases passed!")
-    }
-
     // leetcode submit region begin(Prohibit modification and deletion)
     class Solution {
         fun merge(

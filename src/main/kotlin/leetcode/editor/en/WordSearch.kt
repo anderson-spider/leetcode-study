@@ -50,40 +50,6 @@ package leetcode.editor.en
 // ? 719
 
 object WordSearch {
-    @JvmStatic
-    fun main(args: Array<String>) {
-        val solution = Solution()
-
-        // Test case 1
-        val board1 =
-            arrayOf(
-                charArrayOf('A', 'B', 'C', 'E'),
-                charArrayOf('S', 'F', 'C', 'S'),
-                charArrayOf('A', 'D', 'E', 'E'),
-            )
-        check(solution.exist(board1, "ABCCED")) { "Test case 1 failed" }
-
-        // Test case 2
-        val board2 =
-            arrayOf(
-                charArrayOf('A', 'B', 'C', 'E'),
-                charArrayOf('S', 'F', 'C', 'S'),
-                charArrayOf('A', 'D', 'E', 'E'),
-            )
-        check(solution.exist(board2, "SEE")) { "Test case 2 failed" }
-
-        // Test case 3
-        val board3 =
-            arrayOf(
-                charArrayOf('A', 'B', 'C', 'E'),
-                charArrayOf('S', 'F', 'C', 'S'),
-                charArrayOf('A', 'D', 'E', 'E'),
-            )
-        check(!solution.exist(board3, "ABCB")) { "Test case 3 failed" }
-
-        println("All test cases passed!")
-    }
-
     // leetcode submit region begin(Prohibit modification and deletion)
     class Solution {
         fun exist(

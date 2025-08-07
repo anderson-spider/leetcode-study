@@ -62,40 +62,6 @@ package leetcode.editor.en
 // Related Topics Array Hash Table Greedy 👍 300 👎 44
 
 object MaximumUniqueSubarraySumAfterDeletion {
-    @JvmStatic
-    fun main(args: Array<String>) {
-        val solution = Solution()
-
-        // Test case 1: [1,2,3,4,5] → 15
-        val test1 = intArrayOf(1, 2, 3, 4, 5)
-        val result1 = solution.maxSum(test1)
-        println("Test 1: ${test1.contentToString()} → $result1 (expected: 15)")
-
-        // Test case 2: [1,1,0,1,1] → 1
-        val test2 = intArrayOf(1, 1, 0, 1, 1)
-        val result2 = solution.maxSum(test2)
-        println("Test 2: ${test2.contentToString()} → $result2 (expected: 1)")
-
-        // Test case 3: [1,2,-1,-2,1,0,-1] → 3
-        val test3 = intArrayOf(1, 2, -1, -2, 1, 0, -1)
-        val result3 = solution.maxSum(test3)
-        println("Test 3: ${test3.contentToString()} → $result3 (expected: 3)")
-
-        // Additional edge cases
-        val test4 = intArrayOf(-1, -2, -3)
-        val result4 = solution.maxSum(test4)
-        println("Test 4: ${test4.contentToString()} → $result4 (expected: -1)")
-
-        val test5 = intArrayOf(5)
-        val result5 = solution.maxSum(test5)
-        println("Test 5: ${test5.contentToString()} → $result5 (expected: 5)")
-
-        // The failing test case from the issue
-        val test6 = intArrayOf(-20, 20)
-        val result6 = solution.maxSum(test6)
-        println("Test 6: ${test6.contentToString()} → $result6 (expected: 20)")
-    }
-
     // leetcode submit region begin(Prohibit modification and deletion)
     class Solution {
         /**

@@ -37,27 +37,6 @@ package leetcode.editor.en
 // Related Topics Array Hash Table Sliding Window 👍 6870 👎 3242
 
 object ContainsDuplicateIi {
-    @JvmStatic
-    fun main(args: Array<String>) {
-        fun check(
-            nums: IntArray,
-            k: Int,
-            expected: Boolean,
-        ) {
-            val solution = Solution()
-            val result = solution.containsNearbyDuplicate(nums, k)
-            println("Input: nums = ${nums.contentToString()}, k = $k")
-            println("Expected: $expected, Actual: $result")
-            println("Test ${if (result == expected) "PASSED" else "FAILED"}\n")
-        }
-
-        check(intArrayOf(1, 2, 3, 1), 3, true)
-        check(intArrayOf(1, 0, 1, 1), 1, true)
-        check(intArrayOf(1, 2, 3, 1, 2, 3), 2, false)
-        check(intArrayOf(1), 1, false)
-        check(intArrayOf(1, 1, 1, 1), 1, true)
-    }
-
     // leetcode submit region begin(Prohibit modification and deletion)
     class Solution {
         fun containsNearbyDuplicate(

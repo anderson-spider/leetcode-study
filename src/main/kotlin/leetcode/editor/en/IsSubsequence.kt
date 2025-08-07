@@ -35,11 +35,6 @@ package leetcode.editor.en
 // Related Topics Two Pointers String Dynamic Programming 👍 10367 👎 586
 
 object IsSubsequence {
-    @JvmStatic
-    fun main(args: Array<String>) {
-        val solution = Solution()
-    }
-
     // leetcode submit region begin(Prohibit modification and deletion)
     class Solution {
         fun isSubsequence(

@@ -57,31 +57,6 @@ package leetcode.editor.en
 // Related Topics Array Hash Table Union Find 👍 1945 👎 76
 
 object NumberOfIslandsIi {
-    @JvmStatic
-    fun main(args: Array<String>) {
-        val solution = Solution()
-
-        // Test Example 1
-        val m1 = 3
-        val n1 = 3
-        val positions1 =
-            arrayOf(
-                intArrayOf(0, 0),
-                intArrayOf(0, 1),
-                intArrayOf(1, 2),
-                intArrayOf(2, 1),
-            )
-        val result1 = solution.numIslands2(m1, n1, positions1)
-        println("Example 1 Result: $result1") // Expected: [1, 1, 2, 3]
-
-        // Test Example 2
-        val m2 = 1
-        val n2 = 1
-        val positions2 = arrayOf(intArrayOf(0, 0))
-        val result2 = solution.numIslands2(m2, n2, positions2)
-        println("Example 2 Result: $result2") // Expected: [1]
-    }
-
     // leetcode submit region begin(Prohibit modification and deletion)
     class Solution {
         fun numIslands2(

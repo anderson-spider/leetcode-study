@@ -44,28 +44,6 @@ package leetcode.editor.en
 // Related Topics Two Pointers String 👍 10549 👎 8565
 
 object ValidPalindrome {
-    @JvmStatic
-    fun main(args: Array<String>) {
-        val solution = Solution()
-
-        // Test case 1: Regular palindrome with special characters
-        check(solution.isPalindrome("A man, a plan, a canal: Panama"))
-
-        // Test case 2: Non-palindrome
-        check(!solution.isPalindrome("race a car"))
-
-        // Test case 3: Empty string with spaces
-        check(solution.isPalindrome(" "))
-
-        // Test case 4: Alphanumeric palindrome
-        check(solution.isPalindrome("ab2ba"))
-
-        // Test case 5: Single character
-        check(solution.isPalindrome("a"))
-
-        println("All test cases passed!")
-    }
-
     // leetcode submit region begin(Prohibit modification and deletion)
     class Solution {
         fun isPalindrome(s: String): Boolean {

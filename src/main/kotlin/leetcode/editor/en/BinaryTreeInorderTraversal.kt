@@ -57,37 +57,6 @@ package leetcode.editor.en
 // Related Topics Stack Tree Depth-First Search Binary Tree 👍 14318 👎 854
 
 object BinaryTreeInorderTraversal {
-    @JvmStatic
-    fun main(args: Array<String>) {
-        val solution = Solution()
-
-        // Test case 1: [1,null,2,3]
-        val root1 = TreeNode(1)
-        root1.right = TreeNode(2)
-        root1.right?.left = TreeNode(3)
-        check(solution.inorderTraversal(root1) == listOf(1, 3, 2)) { "Failed test case 1" }
-
-        // Test case 2: [1,2,3,4,5,null,8,null,null,6,7,9]
-        val root2 = TreeNode(1)
-        root2.left = TreeNode(2)
-        root2.right = TreeNode(3)
-        root2.left?.left = TreeNode(4)
-        root2.left?.right = TreeNode(5)
-        root2.right?.right = TreeNode(8)
-        root2.left?.right?.left = TreeNode(6)
-        root2.left?.right?.right = TreeNode(7)
-        root2.right?.right?.left = TreeNode(9)
-        check(solution.inorderTraversal(root2) == listOf(4, 2, 6, 5, 7, 1, 3, 9, 8)) { "Failed test case 2" }
-
-        // Test case 3: []
-        check(solution.inorderTraversal(null) == listOf<Int>()) { "Failed test case 3" }
-
-        // Test case 4: [1]
-        check(solution.inorderTraversal(TreeNode(1)) == listOf(1)) { "Failed test case 4" }
-
-        println("All test cases passed!")
-    }
-
     // leetcode submit region begin(Prohibit modification and deletion)
 
     /**

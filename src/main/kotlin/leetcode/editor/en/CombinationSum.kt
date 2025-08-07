@@ -50,28 +50,6 @@ package leetcode.editor.en
 // Related Topics Array Backtracking 👍 20079 👎 485
 
 object CombinationSum {
-    @JvmStatic
-    fun main(args: Array<String>) {
-        val solution = Solution()
-        check(
-            solution.combinationSum(intArrayOf(2, 3, 6, 7), 7) ==
-                listOf(
-                    listOf(2, 2, 3),
-                    listOf(7),
-                ),
-        ) { "Test case 1 failed" }
-        check(
-            solution.combinationSum(intArrayOf(2, 3, 5), 8) ==
-                listOf(
-                    listOf(2, 2, 2, 2),
-                    listOf(2, 3, 3),
-                    listOf(3, 5),
-                ),
-        ) { "Test case 2 failed" }
-        check(solution.combinationSum(intArrayOf(2), 1) == listOf<List<Int>>()) { "Test case 3 failed" }
-        println("All test cases passed!")
-    }
-
     // leetcode submit region begin(Prohibit modification and deletion)
     class Solution {
         fun combinationSum(

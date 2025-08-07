@@ -39,38 +39,6 @@ package leetcode.editor.en
 // 370 👎 270
 
 object SameTree {
-    @JvmStatic
-    fun main(args: Array<String>) {
-        val solution = Solution()
-
-        // Test case 1: Identical trees [1,2,3]
-        val p1 = TreeNode(1)
-        p1.left = TreeNode(2)
-        p1.right = TreeNode(3)
-        val q1 = TreeNode(1)
-        q1.left = TreeNode(2)
-        q1.right = TreeNode(3)
-        assert(solution.isSameTree(p1, q1)) { "Test case 1 failed" }
-
-        // Test case 2: Different structure [1,2] and [1,null,2]
-        val p2 = TreeNode(1)
-        p2.left = TreeNode(2)
-        val q2 = TreeNode(1)
-        q2.right = TreeNode(2)
-        assert(!solution.isSameTree(p2, q2)) { "Test case 2 failed" }
-
-        // Test case 3: Different values [1,2,1] and [1,1,2]
-        val p3 = TreeNode(1)
-        p3.left = TreeNode(2)
-        p3.right = TreeNode(1)
-        val q3 = TreeNode(1)
-        q3.left = TreeNode(1)
-        q3.right = TreeNode(2)
-        assert(!solution.isSameTree(p3, q3)) { "Test case 3 failed" }
-
-        println("All test cases passed!")
-    }
-
     // leetcode submit region begin(Prohibit modification and deletion)
 
     /**

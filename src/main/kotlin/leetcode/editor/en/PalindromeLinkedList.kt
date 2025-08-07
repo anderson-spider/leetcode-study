@@ -33,41 +33,6 @@ package leetcode.editor.en
 // Related Topics Linked List Two Pointers Stack Recursion 👍 17589 👎 944
 
 object PalindromeLinkedList {
-    @JvmStatic
-    fun main(args: Array<String>) {
-        val solution = Solution()
-
-        // Test case 1: [1,2,2,1] - should return true
-        val test1 = createLinkedList(listOf(1, 2, 2, 1))
-        println("Test case 1: [1,2,2,1] - Result: ${solution.isPalindrome(test1)}")
-
-        // Test case 2: [1,2] - should return false
-        val test2 = createLinkedList(listOf(1, 2))
-        println("Test case 2: [1,2] - Result: ${solution.isPalindrome(test2)}")
-
-        // Edge case 1: Single node [5] - should return true
-        val test3 = createLinkedList(listOf(5))
-        println("Edge case 1: [5] - Result: ${solution.isPalindrome(test3)}")
-
-        // Edge case 2: Empty list - should return true
-        println("Edge case 2: [] - Result: ${solution.isPalindrome(null)}")
-    }
-
-    // Helper function to create a linked list from a list of integers
-    private fun createLinkedList(values: List<Int>): ListNode? {
-        if (values.isEmpty()) return null
-
-        val head = ListNode(values[0])
-        var current = head
-
-        for (i in 1 until values.size) {
-            current.next = ListNode(values[i])
-            current = current.next!!
-        }
-
-        return head
-    }
-
     class ListNode(
         var `val`: Int,
     ) {

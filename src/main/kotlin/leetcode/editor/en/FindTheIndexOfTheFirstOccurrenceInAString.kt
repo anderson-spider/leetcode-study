@@ -31,27 +31,6 @@ package leetcode.editor.en
 // Related Topics Two Pointers String String Matching 👍 6858 👎 511
 
 object FindTheIndexOfTheFirstOccurrenceInAString {
-    @JvmStatic
-    fun main(args: Array<String>) {
-        val solution = Solution()
-        // Test case 1: Normal case with match at beginning
-        check(solution.strStr("sadbutsad", "sad") == 0) { "Test case 1 failed" }
-
-        // Test case 2: No match
-        check(solution.strStr("leetcode", "leeto") == -1) { "Test case 2 failed" }
-
-        // Test case 3: Match at end
-        check(solution.strStr("hello", "lo") == 3) { "Test case 3 failed" }
-
-        // Test case 4: Single character match
-        check(solution.strStr("aaaaa", "a") == 0) { "Test case 4 failed" }
-
-        // Test case 5: Needle longer than haystack
-        check(solution.strStr("abc", "abcd") == -1) { "Test case 5 failed" }
-
-        println("All test cases passed!")
-    }
-
     // leetcode submit region begin(Prohibit modification and deletion)
     class Solution {
         fun strStr(

@@ -41,12 +41,6 @@ package leetcode.editor.en
 // Related Topics Math 👍 14354 👎 2828
 
 object PalindromeNumber {
-    @JvmStatic
-    fun main(args: Array<String>) {
-        val solution = Solution()
-        solution.isPalindrome(1221)
-    }
-
     // leetcode submit region begin(Prohibit modification and deletion)
     class Solution {
         fun isPalindrome(x: Int): Boolean {

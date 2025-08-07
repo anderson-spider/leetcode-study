@@ -45,20 +45,6 @@ package leetcode.editor.en
 // Related Topics Array Binary Search Sliding Window Prefix Sum 👍 13610 👎 506
 
 object MinimumSizeSubarraySum {
-    @JvmStatic
-    fun main(args: Array<String>) {
-        val solution = Solution()
-
-        check(solution.minSubArrayLen(target = 7, nums = intArrayOf(2, 3, 1, 2, 4, 3)) == 2) {}
-        check(solution.minSubArrayLen(target = 4, nums = intArrayOf(1, 4, 4)) == 1) {}
-        check(solution.minSubArrayLen(target = 11, nums = intArrayOf(1, 1, 1, 1, 1, 1, 1, 1)) == 0) {}
-        check(solution.minSubArrayLen(target = 15, nums = intArrayOf(1, 2, 3, 4, 5)) == 5) {}
-        check(solution.minSubArrayLen(target = 11, nums = intArrayOf(1, 2, 3, 4, 5)) == 3) {}
-        check(solution.minSubArrayLen(target = 15, nums = intArrayOf(5, 1, 3, 5, 10, 7, 4, 9, 2, 8)) == 5) {}
-
-// Output: 0
-    }
-
     // leetcode submit region begin(Prohibit modification and deletion)
     class Solution {
         fun minSubArrayLen(

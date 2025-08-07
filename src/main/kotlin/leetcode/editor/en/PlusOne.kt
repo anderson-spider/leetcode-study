@@ -50,15 +50,6 @@ package leetcode.editor.en
 // Related Topics Array Math 👍 10515 👎 5512
 
 object PlusOne {
-    @JvmStatic
-    fun main(args: Array<String>) {
-        val solution = Solution()
-        check(solution.plusOne(intArrayOf(1, 2, 3)).contentEquals(intArrayOf(1, 2, 4))) { "Test case 1 failed" }
-        check(solution.plusOne(intArrayOf(4, 3, 2, 1)).contentEquals(intArrayOf(4, 3, 2, 2))) { "Test case 2 failed" }
-        check(solution.plusOne(intArrayOf(9)).contentEquals(intArrayOf(1, 0))) { "Test case 3 failed" }
-        println("All test cases passed!")
-    }
-
     // leetcode submit region begin(Prohibit modification and deletion)
     class Solution {
         fun plusOne(digits: IntArray): IntArray {

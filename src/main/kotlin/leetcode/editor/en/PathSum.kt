@@ -46,48 +46,6 @@ package leetcode.editor.en
 // 315 👎 1186
 
 object PathSum {
-    @JvmStatic
-    fun main(args: Array<String>) {
-        val solution = Solution()
-
-        val codec = SerializeAndDeserializeBinaryTree.Codec()
-        codec.deserialize(codec.serialize(null))
-        // Test case 1: Path with sum exists
-        val root1 =
-            TreeNode(5).apply {
-                left =
-                    TreeNode(4).apply {
-                        left =
-                            TreeNode(11).apply {
-                                left = TreeNode(7)
-                                right = TreeNode(2)
-                            }
-                    }
-                right =
-                    TreeNode(8).apply {
-                        left = TreeNode(13)
-                        right =
-                            TreeNode(4).apply {
-                                right = TreeNode(1)
-                            }
-                    }
-            }
-        check(solution.hasPathSum(root1, 22)) { "Test case 1 failed" }
-
-        // Test case 2: Path with sum doesn't exist
-        val root2 =
-            TreeNode(1).apply {
-                left = TreeNode(2)
-                right = TreeNode(3)
-            }
-        check(!solution.hasPathSum(root2, 5)) { "Test case 2 failed" }
-
-        // Test case 3: Empty tree
-        check(!solution.hasPathSum(null, 0)) { "Test case 3 failed" }
-
-        println("All test cases passed!")
-    }
-
     // leetcode submit region begin(Prohibit modification and deletion)
 
     /**

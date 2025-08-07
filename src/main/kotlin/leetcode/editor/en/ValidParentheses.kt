@@ -55,19 +55,6 @@ package leetcode.editor.en
 // Related Topics String Stack 👍 26091 👎 1905
 
 object ValidParentheses {
-    @JvmStatic
-    fun main(args: Array<String>) {
-        val solution = Solution()
-        check(solution.isValid("()")) { "Test case 1 failed" }
-        check(solution.isValid("()[]{}")) { "Test case 2 failed" }
-        check(!solution.isValid("(]")) { "Test case 3 failed" }
-        check(solution.isValid("([])")) { "Test case 4 failed" }
-        check(!solution.isValid("([)]")) { "Test case 5 failed" }
-        check(!solution.isValid("]")) { "Test case 6 failed" }
-        check(solution.isValid("")) { "Test case 7 failed" }
-        println("All test cases passed!")
-    }
-
     // leetcode submit region begin(Prohibit modification and deletion)
     class Solution {
         fun isValid(s: String): Boolean {

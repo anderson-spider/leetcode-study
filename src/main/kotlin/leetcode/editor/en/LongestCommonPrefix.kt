@@ -33,17 +33,6 @@ package leetcode.editor.en
 // Related Topics Array String Trie 👍 19497 👎 4764
 
 object LongestCommonPrefix {
-    @JvmStatic
-    fun main(args: Array<String>) {
-        val solution = Solution()
-        check("fl" == solution.longestCommonPrefix(arrayOf("flower", "flow", "flight")))
-        check("" == solution.longestCommonPrefix(arrayOf("dog", "racecar", "car")))
-        check("" == solution.longestCommonPrefix(arrayOf()))
-        check("a" == solution.longestCommonPrefix(arrayOf("a")))
-        check("c" == solution.longestCommonPrefix(arrayOf("c", "c")))
-        println("All test cases passed!")
-    }
-
     // leetcode submit region begin(Prohibit modification and deletion)
     class Solution {
         fun longestCommonPrefix(strs: Array<String>): String {

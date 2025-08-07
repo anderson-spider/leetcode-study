@@ -46,28 +46,6 @@ package leetcode.editor.en
 // Related Topics Array Math Two Pointers 👍 19704 👎 2116
 
 object RotateArray {
-    @JvmStatic
-    fun main(args: Array<String>) {
-        val solution = Solution()
-
-        // Test case 1
-        val nums1 = intArrayOf(1, 2, 3, 4, 5, 6, 7)
-        solution.rotate(nums1, 3)
-        check(nums1.contentEquals(intArrayOf(5, 6, 7, 1, 2, 3, 4))) { "Test case 1 failed" }
-
-        // Test case 2
-        val nums2 = intArrayOf(-1, -100, 3, 99)
-        solution.rotate(nums2, 2)
-        check(nums2.contentEquals(intArrayOf(3, 99, -1, -100))) { "Test case 2 failed" }
-
-        // Test case 3
-        val nums3 = intArrayOf(1, 2, 3)
-        solution.rotate(nums3, 3)
-        check(nums3.contentEquals(intArrayOf(1, 2, 3))) { "Test case 3 failed" }
-
-        println("All test cases passed!")
-    }
-
     // leetcode submit region begin(Prohibit modification and deletion)
     class Solution {
         fun rotate(

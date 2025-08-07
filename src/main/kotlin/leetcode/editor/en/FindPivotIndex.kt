@@ -58,12 +58,6 @@ package leetcode.editor.en
 // Related Topics Array Prefix Sum 👍 8875 👎 900
 
 object FindPivotIndex {
-    @JvmStatic
-    fun main(args: Array<String>) {
-        val solution = Solution()
-        solution.pivotIndex(intArrayOf(1, 7, 3, 6, 5, 6))
-    }
-
     // leetcode submit region begin(Prohibit modification and deletion)
     class Solution {
         fun pivotIndex(nums: IntArray): Int {
